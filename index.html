@@ -9,8 +9,8 @@
 <div class="container" style="margin-bottom: 185px">
 <header>
     <div class="header-first-div">
-        <h1 class="device">DEVICE</h1>
-        <p>
+        <a href="index.html" class="device">DEVICE</a>
+        <div class="header-first-div-inner">
             <span class="search-span">
                 <span class="header-hidden-span">
                     Спан с иконкой
@@ -22,8 +22,16 @@
                     M2,7c0-2.762,2.238-5,5-5s5,2.238,5,5s-2.238,5-5,5S2,9.762,2,7z"/>
                 </svg>
             </span>
-            <input placeholder="Поиск по сайту">
-        </p>
+            <input id="headerInput" placeholder="Поиск по сайту">
+            <div class="header-first-div-inner-inside-right search-button-hide">
+                <button class="header-first-div-search-button">
+                    <span>
+                        Найти
+                    </span>
+                </button>
+                <span class="header-first-div-search-button-underline"></span>
+            </div>            
+        </div>
         <ul class="header-catalog-ul">
             <li class="header-Gilroy-extra-bold">Каталог товаров</li>
             <button class="catalog-button"></button>
@@ -46,7 +54,7 @@
         </div>
     </div>
     <div class="header-second-div">
-    <div class="functioinal">
+    <div class="functional">
         <a>
         <span style="margin-right:15px">
             <span class="header-hidden-span">
@@ -92,10 +100,11 @@
         </a>
         </div>
     </div>
-    <div class="functioinal-2 header-Gilroy-extra-bold">
-        <a class="functioinal-2-first-li" style="margin-right:33px">Доставка</a>
+    <div style="position:relative" class="functional-2 header-Gilroy-extra-bold">
+        <span class="functional-2-white-line"></span>         
+        <a class="functional-2-first-a" style="margin-right:33px">Доставка</a>
         <a style="margin-right:78px">Гарантия</a>
-        <a style="position:relative; right:-4px;">Контакты</a>     
+        <a style="position:relative; right:-4px;">Контакты</a>             
 </header>
 
 <article class="products">

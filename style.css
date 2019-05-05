@@ -103,6 +103,10 @@ header ul{
     top: -33px;
 
     margin: 0;
+
+    color: black;
+
+    text-decoration: none;
 }
 
 .header-Gilroy-extra-bold{
@@ -125,9 +129,15 @@ header input{
 
     border: 0px;
     background-color: transparent;
+    
+    color: black;
+
+    opacity: 0.3;
+
+    transition: opacity, 0.5s, ease-in-out, 0.5s;
 }
 
-.functioinal{
+.functional{
     font-family: 'Open-Sans';
 
     font-weight: lighter;
@@ -141,13 +151,7 @@ header input{
     justify-content: space-between;
 }
 
-.functioinal-2-first-li{
-    position: relative;
-}
-
-.functioinal-2-first-li::after{
-    content: '';
-
+.functional-2-white-line{ 
     position: absolute;
 
     width: 100px;
@@ -164,20 +168,62 @@ header input{
     height: 300px;
 }
 
-.header-first-div p{
+.header-first-div-inner{
+    display: flex;
+    align-items: center;
+
     position: relative;
 
-    height: 19px;
+    width: 440px;
+    height: 50px;   
 
-    margin: 0;
-    margin-top: 60px;
-    margin-bottom: 30px;
-    margin-left: 40px;
+    margin-top: 40px;
+    margin-bottom: 20px;
+}
+
+.header-first-div-inner-inside-right{
+    position: relative;
+
+    height: 100%;
+    
+    margin-left: auto;
+}
+
+.search-button-hide{
+    display: none;
+}
+
+.header-first-div-search-button{
+    display: inline-block;
+    box-sizing: border-box;
+
+    padding: 0px;
+
+    width: 85px;
+    height: 100%;
+
+    border-width: 2px;
+    border-color: black;
+
+    background-color: transparent;
+}
+
+.header-first-div-search-button-underline{
+    position: absolute;
+
+    width: 440px;
+    height: 2px;
+
+    bottom: 0;
+    right: 0;
+
+    background-color: black;
 }
 
 .header-first-div input{
     line-height: 19px;  
     margin: 0;
+    margin-left: 40px;
     padding: 0;
 }
 
@@ -187,10 +233,7 @@ header input{
 }
 
 .search-span{
-    position: absolute;
-
-    top: 0px;
-    left: -40px;
+    display: flex;
 }
 
 .span-margin-right{
@@ -342,7 +385,7 @@ article p{
 }
 
 .products-buttons{    
-    margin-bottom: 68px;
+    margin-bottom: 58px;
 }
 
 .products-buttons-radiobutton-div{
@@ -375,20 +418,39 @@ article p{
     background-color: transparent;
 
     padding: 0px;
+
     width: 220px;
+    height: 40px;
 
     text-align: center;
 }
 
 .products-button-more::after{
     content: "";
+
     position: absolute;
+
     width: 220px;
     height: 8px;
+
     background-color: rgb(240, 197, 46);
+
     left: 0;
-    top: 7px;
+    top: 50%;
+
+    margin-top: -4px;
+
     z-index: -1;
+}
+
+.products-button-more:hover{
+    cursor: pointer;
+    background-color: rgb(240,  197, 46);
+}
+
+.products-button-more:focus{
+    outline: 0px;
+    outline-color: transparent;
 }
 
 .radio-button-span{
@@ -462,7 +524,7 @@ article p{
 }
 
 .products-description-second-p{
-    margin-bottom: 61px;
+    margin-bottom: 51px;
 }
 
 /* Второй слайд с фитнес-браслетом */
@@ -872,6 +934,7 @@ article p{
 
     padding: 0px;
     width: 260px;
+    height: 40px;
     text-align: center;    
 }
 
@@ -885,7 +948,10 @@ article p{
     background-color: rgb(240,  197, 46);
 
     left: 0;
-    top: 7px;
+    top: 50%;
+
+    margin-top: -4px;
+
     z-index: -1;
 }
 
@@ -895,7 +961,8 @@ article p{
 }
 
 .about-and-contacts button:hover{
-    cursor: pointer;	
+    cursor: pointer;
+    background-color: rgb(240,  197, 46);	
 }
 
 .about{
@@ -1310,4 +1377,36 @@ footer ul{
     Обработка действий совершаемых над элементами хедера
 
 */
+
+header ul li:hover,
+header a:hover{
+    cursor: pointer;
+    opacity: 0.6;
+}
+
+header ul li:focus,
+header a:focus{
+    opacity: 0.3;
+}
+
+header input:hover{
+    opacity: 0.6;
+}
+
+header input:focus{
+    opacity: 1;
+    color: black;
+}
+
+.header-first-div-search-button:hover{
+    background-color: black;
+    color: white;
+}
+
+.header-first-div-search-button:focus{
+    outline: 0;
+    outline-color: transparent;
+    background-color: black;    
+}
+
 
