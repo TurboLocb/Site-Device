@@ -1,0 +1,1313 @@
+@import url("animation.css");
+
+@font-face{
+    font-family: 'Gilroy';
+
+    src: url("fonts/gilroylight.woff") format("woff");
+
+    src: url("fonts/gilroylight.woff2") format("woff2");
+
+    font-weight: lighter;
+
+    font-style: italic;
+
+}
+
+@font-face{
+    font-family: 'Gilroy';
+
+    src: url("fonts/gilroyextrabold.woff") format("woff");
+
+    src: url("fonts/gilroyextrabold.woff2") format("woff2");
+
+    font-weight: bolder;
+
+    font-style: normal;
+
+}
+
+@font-face{
+    font-family: 'Open-Sans';
+
+    src: url("fonts/opensans.woff") format("woff");
+
+    src: url("fonts/opensans.woff2") format("woff2");
+
+    font-weight: normal;
+
+    font-style: normal;
+
+}
+
+@font-face{
+    font-family: 'Open-Sans';
+
+    src: url("fonts/opensanslight.woff") format("woff");
+
+    src: url("fonts/opensanslight.woff2") format("woff2");
+
+    font-weight: lighter;
+
+    font-style: normal;
+
+}
+
+body{
+    margin: 0;
+}
+
+.container{
+    width: 1160px;
+    margin: 0 auto;
+}
+
+article{
+    position: relative;
+}
+
+/* Формируем хедер */
+header{
+    position: relative;
+
+    display: flex;
+
+    max-width: 1160px;
+    max-height: 300px;
+
+    background-color: rgb(247,  226, 150);
+
+    margin-top: 41px;
+
+    padding: 0 60px;
+
+    justify-content: space-between;
+}
+
+
+header ul{
+    list-style: none;
+
+    margin: 0 0;
+    padding: 0 0;
+
+}
+
+.device{
+    font-family: 'Gilroy';
+    
+    font-size: 48px;
+
+    position: absolute;
+
+    left: 60px;
+    top: -33px;
+
+    margin: 0;
+}
+
+.header-Gilroy-extra-bold{
+    font-family: 'Gilroy';
+    
+    font-size: 18px;
+
+    line-height: 24px;
+
+    letter-spacing: 4px;
+
+    text-transform: uppercase;
+}
+
+header input{
+    font-family: 'Open-Sans';
+
+    font-weight: lighter;
+    font-size: 15px;
+
+    border: 0px;
+    background-color: transparent;
+}
+
+.functioinal{
+    font-family: 'Open-Sans';
+
+    font-weight: lighter;
+    font-size: 15px;
+    
+    margin-top: 60px;
+    margin-bottom: 30px;
+    line-height: 19px;
+
+    display: flex;    
+    justify-content: space-between;
+}
+
+.functioinal-2-first-li{
+    position: relative;
+}
+
+.functioinal-2-first-li::after{
+    content: '';
+
+    position: absolute;
+
+    width: 100px;
+    height: 7px;
+
+    background-color: white;
+
+    left: 0;
+    bottom: -92px;
+}
+
+.header-first-div{
+    width: 500px;
+    height: 300px;
+}
+
+.header-first-div p{
+    position: relative;
+
+    height: 19px;
+
+    margin: 0;
+    margin-top: 60px;
+    margin-bottom: 30px;
+    margin-left: 40px;
+}
+
+.header-first-div input{
+    line-height: 19px;  
+    margin: 0;
+    padding: 0;
+}
+
+.header-first-div input:focus{
+    outline: 0;
+	outline-color: transparent;	
+}
+
+.search-span{
+    position: absolute;
+
+    top: 0px;
+    left: -40px;
+}
+
+.span-margin-right{
+    margin-right: 10px;
+}
+
+.header-second-div{
+    width: 500px;
+    height: 300px;
+}
+
+.header-hidden-span{
+    display: none;
+}
+
+.header-catalog-ul{
+    display: flex;
+    align-items: center;
+}
+
+.catalog-button{
+    position: relative;
+
+    height: 16px;
+    width: 16px;
+
+    margin-left: 11px;
+
+    background: transparent;
+    border-color: transparent;
+}
+
+.catalog-button:focus{
+    outline: 0;
+	outline-color: transparent;	
+}
+
+.catalog-button:hover{
+    cursor: pointer;
+}
+
+/* Анимация сдигания клавиши */
+.catalog-button-animation{
+    animation: blink 0.2s;
+}
+
+.catalog-button-reverse-animation{
+    animation: reverseblink 0.2s;
+}
+
+.catalog-button::before,
+.catalog-button::after{
+    content: "";
+
+    position: absolute;
+
+    width: 3px;
+    height: 16px;
+
+    background-color: rgb(184, 164, 116);
+
+    top: -2px;
+    left: 5px;
+}
+
+.catalog-button::after{
+    transform: rotate(90deg);
+}
+
+/* Формируем каталог в хедере */
+.header-catalog-div{
+    position: absolute;
+    top: 170px;
+    left: 0;
+    
+    height: 130px;
+    width: 1100px;
+
+    background-color: rgb(247,  226, 150);
+
+    font-family: 'Open-Sans';
+
+    font-weight: lighter;
+
+    font-size: 15px;
+
+    z-index: 2;
+    
+    padding-left: 60px;
+}
+
+.header-catalog-div-inner{
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;    
+
+    height: 130px;
+    width: 550px;
+}
+
+.header-catalog-div-inner ul li{
+    font: inherit;
+    
+    margin-bottom: 20px;
+}
+
+.catalog-hide{
+    display: none;
+}
+/* 
+
+    Артикл в боди 
+
+*/ 
+
+article h1{
+    font-family: 'Gilroy';    
+    font-size: 48px;
+}
+
+article p{
+    font-family: 'Open-Sans';
+
+    font-weight: lighter;
+    font-size: 15px;
+}
+
+.products{
+    height: 380px;
+}
+
+.description-01,
+.description-02,
+.description-03{
+    font-family: 'Gilroy';
+   
+    font-size: 179px;   
+
+    margin: 0px;
+    padding: 0px;
+
+    color: white;   
+}
+
+.products-description-with-h1{
+    position: relative;
+
+    margin-bottom: 34px;
+}
+
+.products-buttons{    
+    margin-bottom: 68px;
+}
+
+.products-buttons-radiobutton-div{
+    position: absolute;
+
+    top: 238px;
+    right: 80px;
+
+    display: flex;
+    justify-content: space-between;
+
+    align-items: center;
+
+    width: 80px;
+
+    margin-right: 10px;
+
+    z-index: 2;
+}
+
+.products-button-more{
+    position: relative;
+    z-index: 1;
+    font-family: 'Gilroy';
+    font-size: 18px;    
+    text-transform: uppercase;
+
+    border: 0px;
+
+    background-color: transparent;
+
+    padding: 0px;
+    width: 220px;
+
+    text-align: center;
+}
+
+.products-button-more::after{
+    content: "";
+    position: absolute;
+    width: 220px;
+    height: 8px;
+    background-color: rgb(240, 197, 46);
+    left: 0;
+    top: 7px;
+    z-index: -1;
+}
+
+.radio-button-span{
+    display: none;
+}
+
+.radio-button{
+    width: 12px;
+    height: 12px;
+
+    margin: 0;
+    padding: 0;
+}
+
+/* Первый слайд (с селфи палкой) и некоторые общие параметры для всех 3-ех слайдов */
+.products-description-one,
+.products-description-two,
+.products-description-three{
+    display: flex;
+    justify-content: space-between;   
+}
+
+.products-description-one-left-side,
+.products-description-two-left-side,
+.products-description-three-left-side{
+    position: relative;
+
+    height: 490px; 
+    width: 400px;
+
+    background-image: url("images/sliders/slider-1.png");
+    background-repeat: no-repeat;
+    background-position: center;
+
+    margin-left: 80px;
+
+    top: -120px;
+}
+
+.products-description-one-right-side,
+.products-description-two-right-side,
+.products-description-three-right-side{
+    position: relative;
+
+    width: 480px;
+
+    margin-right: 80px;
+
+    top: -34px;;
+}
+
+.products-description-one-h1,
+.products-description-two-h1,
+.products-description-three-h1{
+    position: relative;    
+    margin: 0;
+    padding: 0;    
+}
+
+.description-01,
+.description-02,
+.description-03{
+    position: absolute;
+
+    top: -110px;
+    right: -33px; 
+}
+
+.products-description-first-p{
+    margin-top: 0;
+}
+
+.products-description-second-p{
+    margin-bottom: 61px;
+}
+
+/* Второй слайд с фитнес-браслетом */
+.products-description-two-left-side{
+    background-image: url("images/sliders/slider-2.png");
+}
+
+.description-02{
+    position: absolute;
+
+    top: -110px;
+    right: -33px;
+}
+
+/* Третий слайд с квадрокоптером */
+.products-description-three-left-side{
+    background-image: url("images/sliders/slider-3.png");
+
+    width: 530px;
+
+    margin-left: 30px;
+}
+
+.description-03{
+    position: absolute;
+
+    top: -110px;
+    right: -10px;
+
+    z-index: -1;
+}
+
+.products-description-three-right-side{
+    position: relative;
+
+    width: 502px;
+
+    margin-right: 58px;
+
+    top: -34px;
+
+    z-index: 0;
+}
+
+.hide-slide{
+    display: none;
+}
+
+/* 
+
+    Блок productions
+
+*/
+
+.productions{
+    margin-top: 110px;
+}
+
+.productions ul li div{
+    height: 160px;
+    width: 160px;
+    background-color: rgb(250, 226, 150);
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.pop-1{
+    background: url("images/productions/popular-1.svg");
+}
+
+.pop-2{
+    background: url("images/productions/popular-2.svg");    
+}
+
+.productions ul li .pop-2{
+    background-position-y: 40px;
+}
+
+.pop-3{
+    background: url("images/productions/popular-3.svg");
+}
+
+.pop-4{
+    background: url("images/productions/popular-4.svg");
+}
+
+.pop-5{
+    background: url("images/productions/popular-5.svg");
+}
+
+.pop-6{
+    background: url("images/productions/popular-6.svg");
+}
+
+.productions ul{
+    display: flex;
+    justify-content: space-between;
+
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.productions li h2{
+    font-family: 'Gilroy';
+    
+    font-style: normal;
+    font-size: 18px;
+
+    margin: 0;
+    padding: 0;
+
+    margin-top: 37px;
+}
+
+.article-div-with-characteristics{
+    display: flex;
+}
+
+.article-characteristic-div h2{
+    font-family: 'Gilroy';
+
+    font-weight: lighter;
+    font-style: italic;
+    font-size: 36px;
+
+    margin: 0;
+}
+
+.article-characteristic-div p{
+    font-size: 13px;
+
+    margin: 0;
+    margin-top: 10px;
+}
+
+/* Блок доставка, гарантия и т.д.*/
+
+.delivery{
+    position: relative;
+
+    background-color: rgb(229, 229, 229);
+    max-height: 290px;
+}
+
+.delivery .container{
+    display: flex;
+    position: relative;
+}
+
+.delivery ul{
+    position: absolute;
+    top: -20px;
+
+    display: flex;
+    flex-direction: column;
+
+    justify-content: space-between;
+
+    height: 168px;
+
+    margin: 0;
+    padding: 0;   
+}
+
+.delivery ul li{
+    position: relative;
+
+    font-family: 'Gilroy';
+
+    font-size: 18px;    
+
+    list-style: none;
+    letter-spacing: 4px;
+    
+    height: 40px;
+
+    text-transform: uppercase;
+
+    padding-left: 20px;
+
+    line-height: 40px;
+    
+    z-index: 1;
+}
+
+.delivery ul li:not(.delivery-li-active)::before{
+    content: "";    
+    position: absolute;    
+
+    height: 8px;
+    width: 160px;
+    background-color: rgb(250, 226, 150);
+
+    top: 15px;
+    left: 0;
+    z-index: -1;
+}
+
+.delivery-li-active{
+    display: inline-block;
+
+    height: 40px;
+    width: 280px;
+
+    background: black;
+    color: rgb(247,225,132);
+
+    text-transform: uppercase;
+
+    padding-left: 20px;
+    
+    line-height: 40px;
+}
+
+.delivery-div{
+    position: relative;
+
+    height: 290px;
+    width: 460px;
+    
+    margin-left: 400px;
+}
+
+.delivery-div h1{
+    font-family: 'Gilroy';
+
+    position: absolute;
+
+    top: -32px;
+    left: 0;
+
+    font-size: 47px;
+
+    margin: 0;
+}
+
+.delivery-div p{
+    font-family: 'Open-Sans';
+
+    font-size: 15px;
+    font-weight: lighter;
+
+    max-height: 77px;
+
+    margin: 0;
+    margin-top: 60px;
+
+    line-height: 24px;
+}
+
+.vertical-line{
+    position: absolute;
+    top: -80px;
+    left: 300px;
+
+    margin: 0;
+    padding: 0;
+
+    width: 8px;
+    height: 320px;
+
+    background-color: black;
+}
+
+.delivery-img{
+    position: absolute;
+    top: -15px;
+    right: 60px;
+}
+
+/* Блок с логотипами */
+.logos ul{
+    display: flex;
+
+    justify-content: space-between;
+
+    margin: 0;
+    padding: 0;    
+}
+
+.logos li{
+    list-style: none;
+}
+
+.logos{
+    margin: 100px 0px;
+}
+
+/* Блок О нас и Контакты */
+.about-and-contacts{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.about-and-contacts h1{
+    position: relative;
+
+    font-family: 'Gilroy';
+
+    font-size: 47px;    
+
+    margin: 0;
+    margin-bottom: 54px;
+}
+
+.about-and-contacts h1::after{
+    content: '';
+
+    position: absolute;
+
+    top: -51px;
+    left: 0;
+
+    width: 80px;
+    height: 7px;
+
+    background-color: black;
+}
+
+.about-and-contacts .about .about-p1{
+    margin-bottom: 35px;
+}
+
+.about-and-contacts .about .about-p2{
+    margin-bottom: 83px;
+}
+
+.about-and-contacts .contacts .contacts-p1{
+    margin-bottom: 35px;
+}
+
+.about-and-contacts p{
+    font-family: 'Open-Sans';
+
+    font-size: 15px;
+    font-weight: lighter;
+
+    line-height: 25px;
+    
+    margin: 0;
+}
+
+.about-and-contacts .transport-company{
+    font-family: 'Gilroy';
+
+    font-size: 16px;    
+
+    list-style: none;
+
+    margin: 0;
+    padding: 0;
+    margin-bottom: 75px;
+}
+
+.about-and-contacts .transport-company li{
+    display: flex;
+    align-items: center;
+
+    margin-bottom: 20px;
+    /* margin-left: 40px; */
+}
+
+.about-and-contacts .transport-company li span{
+    position: relative;
+
+    width: 10px;
+    height: 10px;
+
+    background-color: rgb(228, 228, 228);   
+    border-radius: 50%;
+
+    margin-right: 30px;
+}
+
+.about-and-contacts .transport-company li span::after{
+    content: "";
+
+    position: absolute;
+
+    width: 6px;
+    height: 6px;
+
+    background-color: rgb(255, 255, 255); 
+    border-radius: 50%;
+    
+    top: 50%;
+    left: 50%;
+    
+    margin-left: -3px;
+    margin-top: -3px;
+}
+
+
+.about-and-contacts button{
+    position: relative;
+    z-index: 1;
+
+    font-family: 'Gilroy';
+
+    font-size: 18px;    
+    text-transform: uppercase;
+
+    border: 0px;
+    background-color: transparent;
+
+    padding: 0px;
+    width: 260px;
+    text-align: center;    
+}
+
+.about-and-contacts button::after{
+    content: "";
+    position: absolute;
+
+    width: 260px;
+    height: 8px;
+
+    background-color: rgb(240,  197, 46);
+
+    left: 0;
+    top: 7px;
+    z-index: -1;
+}
+
+.about-and-contacts button:focus{
+    outline: 0;
+    outline-color: transparent;	
+}
+
+.about-and-contacts button:hover{
+    cursor: pointer;	
+}
+
+.about{
+    width: 560px;
+}
+
+.contacts{
+    width: 560px;
+}
+
+.contacts iframe{
+    margin-bottom: 78px;
+}
+
+/* Футер */
+footer{  
+    margin-top: 92px;
+    padding: 0;
+
+    width: 100%;
+    
+    background-color: rgb(70, 70, 70);
+}
+
+footer .container{
+    display: flex;
+}
+
+footer ul{
+    list-style: none;
+    
+    margin: 0;
+    padding: 0;
+}
+
+.footer-first-div{
+    width: 300px;
+    height: 323px;
+
+    margin-right: 60px;
+}
+
+.footer-first-div h1{
+    font-family: 'Gilroy';
+
+    font-size: 48px;    
+
+    line-height: 48px;
+
+    color: rgb(255, 198, 0);
+
+    margin-top: 60px;
+    margin-bottom: 35px;
+}
+
+.footer-first-div p{
+    font-family: 'Open-Sans';
+
+    font-size: 15px;
+    font-weight: lighter;
+
+    line-height: 15px;
+    
+    margin: 0;
+}
+
+.footer-first-div figure{
+    margin: 0;
+    margin-top: 80px;
+    padding: 0;
+
+    width: 80px;
+    height: 8px;
+
+    background-color: rgb(255, 198, 0);
+}
+
+.footer-first-div figure span{
+    display: none;
+}
+
+.footer-second-div{
+    font-family: 'Gilroy';
+
+    font-size: 18px;    
+
+    width: 440px;
+    height: 323px;
+
+    padding: 0 7px;
+}
+
+.footer-second-div .first-ul{
+    display: flex;
+    justify-content: space-between;    
+    margin-top: 142px;
+}
+
+.footer-second-div .first-ul li{ 
+    font: inherit;
+    text-transform: uppercase;
+
+    line-height: 18px;
+    
+    letter-spacing: 3px;
+}
+
+.footer-second-div .second-ul{
+    display: flex;
+    justify-content: space-between;
+
+    width: 160px;
+
+    padding: 0 10px;
+    margin-top: 70px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.footer-second-div .second-ul li{
+    width: 33px;   
+    height: 33px;   
+}
+
+/* Скрытые названия социальных кнопок */
+.footer-second-div .second-ul li span{
+    display: none;
+}
+
+.footer-second-div .second-ul li a{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    height: 33px;
+    width: 33px;
+
+    border-radius: 50%;
+
+    background-color: rgb(126, 126, 126);
+
+    transition: background-color, 0.5s, ease-out, 0.8s;
+}
+
+.footer-second-div .second-ul li a:hover{
+    background-color: white;    
+}
+
+.footer-third-div{    
+
+    font-family: 'Open-Sans';
+
+    font-size: 15px;
+    font-weight: lighter;
+
+    width: 360px;
+    height: 323px;
+}
+
+.third-div-ul{
+    display: flex;
+    justify-content: space-between;
+
+    font: inherit;
+
+    width: 326px;
+
+    margin-top: 72px;
+    margin-left: auto;
+}
+
+.third-div-ul li{
+    line-height: 15px;
+}
+
+.third-div-ul li span{
+    margin-right: 12px;
+}
+
+.telephone-number{
+    margin: 0;
+    margin-top: 52px;
+    
+    text-align: right;
+
+    line-height: 15px;
+
+    margin-bottom: 75px;
+}
+
+.html-academy-logo-a{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    width: 30px;
+    height: 38px;
+    
+    margin: 0;
+
+    float: right;
+}
+
+/* Задаем белый цвет для нужных элементов в футере */
+.footer-first-div p,
+.footer-second-div .first-ul li,
+.footer-third-div .third-div-ul li,
+.footer-third-div .telephone-number{
+    color: white;
+}
+
+/* Межбуквенный интервал кнопок */
+.products-button-more,
+.about button,
+.contacts button{
+    letter-spacing: 4px;
+}
+
+/* Различные popup'ы */
+.write-us-popup{
+    position: fixed;
+
+    display: flex;
+    flex-direction: column;
+    
+    box-sizing: border-box;
+
+    top: 50%;
+    left: 50%;
+
+    margin-top: -277px; /* ~1/2*height */
+    margin-left: -480px;
+
+    height: 553px;
+    width: 960px;
+
+    background-color: white;
+
+    z-index: 3;
+    padding: 91px 100px;
+
+    box-shadow: 0px 20px 40px -20px black;
+}
+
+.write-us-popup-first-row{
+    display: flex;
+    justify-content: space-between;
+}
+
+/* Поля 'Имя Фамилия' и 'email' */
+
+/* Задаем шрифты */
+.write-us-popup label{
+    font-family: 'Gilroy';
+    font-size: 18px;    
+}
+
+.write-us-popup input, textarea{
+    font-family: 'Open-Sans';
+    font-size: 14px;
+    font-weight: normal;
+    color: rgb(70, 70, 70);
+}
+
+/* Размеры блоков */
+.write-us-popup-first-row input{
+    display: inline-block;
+    box-sizing: border-box;
+
+    height: 50px;
+    width: 360px;
+
+    background-color: rgb(242, 242, 242);
+
+    padding-top: 18px;
+    padding-bottom: 21px;
+    padding-left: 19px;
+    padding-right: 19px;
+
+    margin-top: 11px;
+
+    border: 0;
+}
+
+.userTextField{
+    display: inline-block;
+    box-sizing: border-box;
+
+    height: 156px;
+    width: 760px;
+
+    background-color: rgb(242, 242, 242);
+
+    padding: 21px 18px;
+
+    margin-top: 11px;
+
+    border: 0;
+}
+
+/* Позиционирование блоков, внутри этих блоков */
+.write-us-popup-first-row div{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 37px;
+}
+.write-us-popup-second-row{
+    display: flex;
+    flex-direction: column;
+}
+
+/* Кнопки */
+.write-us-popup-submit-button{
+    position: relative;
+    z-index: 1;
+    font-family: 'Gilroy';
+    font-size: 18px;   
+    text-transform: uppercase;
+
+    letter-spacing: 4px;
+
+    border: 0px;
+
+    background-color: transparent;
+
+    padding: 0px;
+    margin-top: 51px;
+
+    width: 220px;
+
+    text-align: center;
+}
+
+.write-us-popup-submit-button:focus{
+    outline: 0;
+    outline-color: transparent;	
+}
+
+.write-us-popup-submit-button:hover{
+    cursor: pointer;	
+}
+
+.write-us-popup-submit-button::after{
+    content: "";
+    position: absolute;
+    width: 220px;
+    height: 8px;
+    background-color: rgb(240, 197, 46);
+    left: 0;
+    top: 7px;
+    z-index: -1;
+}
+
+.write-us-popup-close-button{
+    position: absolute;
+
+    top: 22px;
+    right: 22px;
+
+    height: 55px;
+    width: 55px;
+
+    border: 0px;
+    border-radius: 50%;
+
+    background-color: rgb(247, 226, 150);
+}
+
+.write-us-popup-close-button:focus{
+    outline: 0;
+    outline-color: transparent;	
+}
+
+.write-us-popup-close-button:hover{
+    cursor: pointer;	
+}
+
+.write-us-popup-close-button::before,
+.write-us-popup-close-button::after{
+    content: '';
+    position: absolute;
+
+    background-color: white;
+
+    height: 30px;
+    width: 4px;
+
+    top: 50%;
+    right: 50%;
+
+    margin-top: -15px;
+    margin-right: -2px;
+
+    transform: rotate(-45deg);
+}
+
+.write-us-popup-close-button::before{
+    transform: rotate(45deg);
+}
+
+.write-us-popup-close-button span{
+    display: none;
+}
+
+.popup-hide{
+    display: none;
+}
+
+
+/* 
+
+    Обработка действий совершаемых над элементами хедера
+
+*/
+
