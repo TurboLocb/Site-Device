@@ -589,6 +589,8 @@ article p{
     background-color: rgb(250, 226, 150);
     background-position: center;
     background-repeat: no-repeat;
+
+    transition: background-color, 0.3s, ease-in-out, 0.8s;
 }
 
 .pop-1{
@@ -1409,4 +1411,20 @@ header input:focus{
     background-color: black;    
 }
 
+/* Блок productions */
+.productions ul li div:hover{
+    cursor: pointer;
+    background-color: rgb(240,  197, 46);
+}
 
+.productions ul li h2:hover{
+    cursor: pointer;
+}
+
+.productions ul li div:focus{
+    outline: 0;
+    outline-color: transparent;
+
+    cursor: pointer;
+    opacity: 0.3;
+}
