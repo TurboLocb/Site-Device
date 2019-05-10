@@ -899,6 +899,16 @@ article p{
     padding: 0;    
 }
 
+.logos ul li div img{
+    opacity: 0;
+
+    transition: opacity, 0.3s, ease-out, 0.8s;
+}
+
+.logos ul li div img:hover{
+    opacity: 1;
+}
+
 .logos li{
     list-style: none;
 }
@@ -906,6 +916,26 @@ article p{
 .logos{
     margin: 100px 0px;
 }
+
+.no-color-logo{   
+    height: 100px;
+    width: 260px;
+}
+
+.dji{
+    background-image: url("images/logos/logo-1.jpg");
+}
+.spgates{
+    background-image: url("images/logos/logo-2.jpg");
+}
+.gopro{
+    background-image: url("images/logos/logo-3.jpg");
+}
+.vive{
+    background-image: url("images/logos/logo-4.jpg");
+}
+
+
 
 /* Блок О нас и Контакты */
 .about-and-contacts{
