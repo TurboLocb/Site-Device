@@ -1137,8 +1137,19 @@ footer ul{
 
     color: rgb(255, 198, 0);
 
+    max-width: 170px;
+
     margin-top: 60px;
     margin-bottom: 35px;
+}
+
+.footer-first-div h1 a{
+    padding: 0;
+    margin: 0;
+    
+    text-decoration: none;
+
+    color: inherit;
 }
 
 .footer-first-div p{
@@ -1150,6 +1161,10 @@ footer ul{
     line-height: 15px;
     
     margin: 0;
+}
+
+.adress-footer{
+    max-width: 210px;
 }
 
 .footer-first-div figure{
@@ -1215,7 +1230,7 @@ footer ul{
     display: none;
 }
 
-.footer-second-div .second-ul li a{
+.social-button{
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -1230,7 +1245,7 @@ footer ul{
     transition: background-color, 0.5s, ease-out, 0.8s;
 }
 
-.footer-second-div .second-ul li a:hover{
+.social-button:hover{
     background-color: white;    
 }
 
@@ -1267,13 +1282,14 @@ footer ul{
 
 .telephone-number{
     margin: 0;
-    margin-top: 52px;
-    
-    text-align: right;
+    margin-top: 52px;   
 
     line-height: 15px;
 
     margin-bottom: 75px;
+    margin-left: auto;
+
+    max-width: 170px;
 }
 
 .html-academy-logo-a{
@@ -1296,6 +1312,7 @@ footer ul{
 .footer-third-div .telephone-number{
     color: white;
 }
+
 
 /* Межбуквенный интервал кнопок */
 .products-button-more,
@@ -1412,9 +1429,10 @@ footer ul{
     background-color: transparent;
 
     padding: 0px;
-    margin-top: 51px;
+    margin-top: 22px;
 
     width: 220px;
+    height: 40px;
 
     text-align: center;
 }
@@ -1435,7 +1453,8 @@ footer ul{
     height: 8px;
     background-color: rgb(240, 197, 46);
     left: 0;
-    top: 7px;
+    top: 50%;
+    margin-top:-4px;
     z-index: -1;
 }
 
@@ -1460,7 +1479,8 @@ footer ul{
 }
 
 .write-us-popup-close-button:hover{
-    cursor: pointer;	
+    cursor: pointer;
+    background-color: rgb(240, 197, 46);	
 }
 
 .write-us-popup-close-button::before,
@@ -1533,7 +1553,11 @@ header input:focus{
     color: rgba(255, 255, 255, 0.3);       
 }
 
-/* Блок productions */
+/* 
+
+    Обработка действий совершаемых над элементами блока productions
+
+*/
 .productions ul li div:hover{
     cursor: pointer;
     background-color: rgb(240,  197, 46);
@@ -1548,5 +1572,52 @@ header input:focus{
     outline-color: transparent;
 
     cursor: pointer;
+    opacity: 0.3;
+}
+
+/* 
+
+    Обработка действий совершаемых над элементами футера
+
+*/
+footer h1:hover,
+footer ul li:not(.social-button-li):hover,
+footer p:hover,
+footer a:not(.social-button):not(.device-footer):hover{
+    cursor: pointer;
+    opacity: 0.6;
+}
+
+footer h1:focus,
+footer ul li:focus,
+footer p:focus,
+footer a:focus{
+    outline: 0;
+    outline-color: transparent;
+
+    opacity: 0.3;
+}
+
+/* 
+
+    Обработка действий совершаемых над элементами блока write-us-popup
+
+*/
+.write-us-popup input:hover,
+.write-us-popup textarea:hover{
+    background-color: rgb(234, 234, 234);    
+}
+
+.write-us-popup-submit-button:hover{
+    background-color: rgb(240,  197, 46);
+}
+
+.write-us-popup input:focus,
+.write-us-popup textarea:focus{
+    background-color: white;
+    outline-color: rgb(247,  226, 150);
+}
+
+.write-us-popup-close-button:focus{
     opacity: 0.3;
 }

@@ -64,11 +64,11 @@ function popupSearchButton(){
     });
 }
 
-function focusChangeBackgroundLine(){
-    /* var delivery = document.getElementById("delivery");    
-    var warranty = document.getElementById("warranty");
-    var credit = document.getElementById("credit"); */
-
+/* 
+    Функция изменяет в блоке 'delivery' 
+    цвет линии находящийся за надписями "Доставка", "Кредит", "Гарантия"
+*/
+function focusChangeBackgroundLine(){  
     var deliveryButton = document.getElementById("delivery-button");
     var warrantyButton = document.getElementById("warranty-button");
     var creditButton = document.getElementById("credit-button");
@@ -83,10 +83,9 @@ function focusChangeBackgroundLine(){
     /* Обрабатываем нажатие на "Доставка" */
     deliveryButton.addEventListener("focus", function(event){
         event.preventDefault();
-
-        console.log("Получен фокус на 'Доставке'");
+        
         deliveryBackgroundLine.classList.add("line-change-background-color");
-        console.log("");
+        
     });
     deliveryButton.addEventListener("blur", function(event){
         event.preventDefault();
@@ -97,10 +96,8 @@ function focusChangeBackgroundLine(){
     /* Обрабатываем нажатие на "Гарантия" */
     warrantyButton.addEventListener("focus", function(event){
         event.preventDefault();
-
-        console.log("Получен фокус на 'Доставке'");
-        warrantyBackgroundLine.classList.add("line-change-background-color");
-        console.log("");
+        
+        warrantyBackgroundLine.classList.add("line-change-background-color");        
     });
     warrantyButton.addEventListener("blur", function(event){
         event.preventDefault();
@@ -111,18 +108,14 @@ function focusChangeBackgroundLine(){
     /* Обрабатываем нажатие на "Кредит" */
     creditButton.addEventListener("focus", function(event){
         event.preventDefault();
-
-        console.log("Получен фокус на 'Доставке'");
-        creditBackgroundLine.classList.add("line-change-background-color");
-        console.log("");
+        
+        creditBackgroundLine.classList.add("line-change-background-color");        
     });
     creditButton.addEventListener("blur", function(event){
         event.preventDefault();
 
         creditBackgroundLine.classList.remove("line-change-background-color");
     });
-
-
 }
 
 popup();
