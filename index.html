@@ -257,14 +257,23 @@
 <section class="delivery">
     <div class="container">    
     <ul>
-        <li class="delivery-li-active">
-            Доставка
+        <li id="delivery">
+            <button id="delivery-button">
+                Доставка
+                <figure class="delivery-line" id="delivery-line"></figure>
+            </button>                 
         </li>
-        <li>
-            Гарантия
+        <li id="warranty">
+            <button id="warranty-button">
+                Гарантия
+                <figure class="delivery-line" id="warranty-line"></figure>
+            </button>
         </li>
-        <li>
-            Кредит
+        <li id="credit">
+            <button id="credit-button">
+                Кредит
+                <figure class="delivery-line" id="credit-line"></figure>
+            </button>
         </li>
         <figure class="vertical-line">   
     </ul>    
@@ -318,7 +327,7 @@
                 ЖелДорЭкспедиция
             </li>
         </ul>
-        <button class="about-us-button">Подробнее о нас</button>
+        <button class="about-us-button"><span>Подробнее о нас</span></button>
     </div>
 
     <div class="contacts">
@@ -329,7 +338,7 @@
             Всякое бывает.
         </p>
         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d387.68445531542886!2d40.22756172506567!3d47.71469820812238!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40e216acce093663%3A0x196781af3daeceeb!2z0KHRgtC10LvQu9CwINC_0LXRgNCy0YvQvCDQutC-0LzRgdC-0LzQvtC70YzRhtCw0Lwg0LMuINCo0LDRhdGC0Ys!5e0!3m2!1sru!2sru!4v1556360412443!5m2!1sru!2sru" width="560" height="223" frameborder="0" style="border:0" allowfullscreen></iframe>
-        <button id="OpenPopupButton">Напишите нам</button>
+        <button id="OpenPopupButton"><span>Напишите нам</span></button>
     </div>
 </section>
 </div>
@@ -431,9 +440,9 @@
         <label for="userText">Текст письма:</label>
         <textarea class="userTextField" type="text" placeholder="В свободной форме"></textarea>
     </div>
-    <button class="write-us-popup-submit-button" type="submit">Отправить</button>
+    <button class="write-us-popup-submit-button" type="submit"><span>Отправить</span></button>
     <button class="write-us-popup-close-button">
-        <span>Close</span>
+        <button><span>Close</span></button>
     </button>
 </form>
 
