@@ -340,6 +340,14 @@ header input{
     margin-bottom: 20px;
 }
 
+.header-catalog-div-inner ul li a{
+    margin: 0;
+    padding: 0;
+
+    text-decoration: none;
+    color: inherit;
+}
+
 .catalog-hide{
     display: none;
 }
@@ -738,7 +746,7 @@ article p{
     text-align: left;
 }
 
-.delivery ul li:hover{
+.delivery ul li button:hover{
     cursor: pointer;
     background-color: rgb(240,  197, 46);
 }
@@ -1621,3 +1629,25 @@ footer a:focus{
 .write-us-popup-close-button:focus{
     opacity: 0.3;
 }
+
+
+/* 
+
+    Селекторы для "Каталога"
+
+*/
+.catalog{
+    max-height: 190px;
+}
+
+/* Блок с навигацией и заголовком */
+.navigation-div{
+    box-sizing: border-box;
+
+    width: 1160px;
+    height: 180px;
+
+    margin: 0 auto;
+    padding-left: 60px;
+}
+
