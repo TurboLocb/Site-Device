@@ -1640,6 +1640,11 @@ footer a:focus{
     max-height: 190px;
 }
 
+.central-block{
+    display: flex;
+    justify-content: center;
+}
+
 /* Блок с навигацией и заголовком */
 .navigation-div{
     box-sizing: border-box;
@@ -1651,3 +1656,69 @@ footer a:focus{
     padding-left: 60px;
 }
 
+.catalog-container{
+    display: flex;
+}
+
+/* Блок "Фильтр" (левая часть страницы) */
+.filter{
+    background-color: rgb(238, 238, 238);
+
+    flex-grow: 1;
+}
+
+.filter-container{
+    box-sizing: border-box;    
+
+    width: 330px;
+    margin-left: auto;
+    padding-left: 60px;
+}
+
+.filter-header{
+    display: flex;   
+    align-items: center;
+    
+    height: 70px;
+    
+    margin: 0 0 0 auto;
+    
+    padding: 0 0 0 60px;
+}
+
+/*
+    Блок "Сортировка" вместе с товарами для продажи
+    (правая часть страницы) 
+*/
+.sorting-and-items{
+    flex-grow: 1;
+    height: 100%;
+}
+
+.sorting{
+    background-color: rgb(235, 235, 235);
+
+    height: 70px;
+}
+
+.sorting-container{
+    display: flex;
+    box-sizing: border-box;
+
+    width: 830px;
+    height: 100%;
+
+    padding-left: 70px;
+}
+
+.sorting-type{
+    display: flex;
+
+    list-style: none;
+}
+
+.items{
+    flex-wrap: wrap;
+
+    justify-content: space-between;
+}
