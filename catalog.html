@@ -118,7 +118,7 @@
 <div class="central-block">
     <div class="filter">
         <div style="background-color: rgb(217, 217, 217)">
-            <h3 class="filter-container filter-header">фильтр:</h3>
+            <h3 class="filter-container filter-header catalog-Gilroy-extra-bold">фильтр:</h3>
         </div>
         <div class="filter-container">
             <figure class="filter-black-line"></figure>
@@ -145,7 +145,7 @@
         <!-- Блок сортировки -->
         <div class="sorting">
             <div class="sorting-container">
-                <h3>сортировка:</h3>
+                <h3 class="catalog-Gilroy-extra-bold">сортировка:</h3>
                 <ul class="sorting-type">
                     <li><button>По цене</button></li>
                     <li><button>По типу</button></li>
@@ -159,32 +159,48 @@
         </div>
         <div class="items sorting-container">
             <div class="item">
-                <img height="360px" width="360px" src="">
-                <p class="item-description"></p>
-                <p class="item-price"></p>
+                <img height="360px" width="360px" src="images/catalog-items/item-1.jpg">
+                <div>
+                    <p class="item-description">Любительская селфи палка</p>
+                    <p class="item-price">500 руб.</p>
+                </div>
             </div>
             <div class="item">
                 <img height="360px" width="360px" src="">
-                <p class="item-description"></p>
-                <p class="item-price"></p>
+                <div>
+                    <p class="item-description"></p>
+                    <p class="item-price"></p>
+                </div>
             </div>
             <div class="item">
                 <img height="360px" width="360px" src="">
-                <p class="item-description"></p>
-                <p class="item-price"></p>
+                <div>
+                    <p class="item-description"></p>
+                    <p class="item-price"></p>
+                </div>
             </div>
             <div class="item">
                 <img height="360px" width="360px" src="">
-                <p class="item-description"></p>
-                <p class="item-price"></p>
+                <div>
+                    <p class="item-description"></p>
+                    <p class="item-price"></p>
+                </div>
             </div>
         </div>
         <nav class="sorting-navigation">
-            <button>Вперед</button>
-            <input type="radio" placeholder="1">
-            <input type="radio" placeholder="2">
-            <input type="radio" placeholder="3">
-            <button>Назад</button>
+            <button style="margin-left:30px" class="sorting-navigation-button catalog-Gilroy-extra-bold">Назад</button>
+            <div class="sorting-navigation-pages">           
+                <label class="custom-button">
+                    <input name="pages" value="1" type="radio" checked><div></div>
+                </label> 
+                <label style="margin: 0px 26px" class="custom-button">
+                    <input name="pages" value="2" type="radio"><div class="second-page"></div>
+                </label>
+                <label class="custom-button">
+                    <input name="pages" value="3" type="radio"><div class="third-page"></div>
+                </label>
+            </div>
+            <button style="margin-right:26px" class="sorting-navigation-button catalog-Gilroy-extra-bold">Вперед</button>
         </nav>
     </div>
 </div>

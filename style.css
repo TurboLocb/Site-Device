@@ -1636,6 +1636,18 @@ footer a:focus{
     Селекторы для "Каталога"
 
 */
+.catalog-Gilroy-extra-bold{
+    font-family: 'Gilroy';
+    
+    font-size: 16px;
+
+    line-height: 24px;
+
+    letter-spacing: 4px;
+
+    text-transform: uppercase;
+}
+
 .catalog{
     max-height: 190px;
 }
@@ -1711,10 +1723,88 @@ footer a:focus{
     padding-left: 70px;
 }
 
+.sorting .sorting-container{
+    align-items: center;
+}
+
 .sorting-type{
     display: flex;
 
     list-style: none;
+}
+
+.sorting-navigation{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-color: rgb(235, 235, 235);
+
+    width: 760px;
+    height: 70px;
+
+    margin-left: 70px;
+    margin-bottom: 77px;
+}
+
+.sorting-navigation-pages{
+    display: flex;
+
+    margin: 0 auto;
+}
+
+.custom-button input{
+    display: none;
+}
+ 
+.custom-button input+div{  
+    width: 20px;
+    height: 20px;
+
+    background-color: transparent;     
+
+    font-family: 'Gilroy';
+    
+    font-size: 16px;
+
+    line-height: 24px;
+
+    color: black;
+
+    opacity: 0.3;
+}
+
+.custom-button div{
+    position: relative;
+}
+
+.custom-button div::after{
+    content: "1";
+
+    display: block;
+    position: absolute;
+
+    top: 0;
+    left: 4px;
+} 
+.custom-button div.second-page:after{
+    content: "2";
+} 
+.custom-button div.third-page::after{
+    content: "3";
+} 
+
+.custom-button input:checked+div{
+    opacity: 1;
+}
+
+.sorting-navigation-button{
+    background-color: transparent;
+
+    border: 0px;
+    border-color: transparent;
+
+    padding: 0;
 }
 
 .items{
@@ -1722,3 +1812,20 @@ footer a:focus{
 
     justify-content: space-between;
 }
+
+.item{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    margin: 0 0;
+    margin-top: 70px;
+
+    height: 420px;
+}
+
+.item div{
+    display: flex;
+    justify-content: space-between;
+}
+
