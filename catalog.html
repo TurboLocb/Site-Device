@@ -135,8 +135,8 @@
             <figure class="filter-black-line"></figure>
             <div>
                 <h5>Bluetooth</h5>
-                <div><input type="radio" checked><span>Есть</span></div>
-                <div><input type="radio" ><span>Нет</span></div>
+                <div><input name="filter" type="radio" checked><span>Есть</span></div>
+                <div><input name="filter" type="radio" ><span>Нет</span></div>
             </div>
             <button class="show-button products-button-more">Показать</button>
         </div>
@@ -147,13 +147,27 @@
             <div class="sorting-container">
                 <h3 class="catalog-Gilroy-extra-bold">сортировка:</h3>
                 <ul class="sorting-type">
-                    <li><button>По цене</button></li>
-                    <li><button>По типу</button></li>
-                    <li><button>По популярности</button></li>
+                    <li>
+                        <label class="sorting-type-button">
+                            <input type="radio" name="sorting-type" checked>
+                            <div></div>
+                        </label>
+                    </li>
+                    <li>
+                        <label class="sorting-type-button">
+                            <input type="radio" name="sorting-type">
+                            <div class="second-type"></div>
+                        </label></li>
+                    <li>
+                        <label class="sorting-type-button">
+                            <input type="radio" name="sorting-type">
+                            <div class="third-type"></div>
+                        </label>
+                    </li>
                 </ul>
-                <div>
-                    <span></span>
-                    <span></span>
+                <div class="sorting-direction">
+                    <label><input type="radio" name="sorting-direction-triangle"><div class="sorting-direction-triangle-up"></div></label>
+                    <label><input type="radio" name="sorting-direction-triangle" checked><div class="sorting-direction-triangle-down"></div></label>
                 </div>
             </div>
         </div>

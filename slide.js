@@ -46,6 +46,8 @@ function catalog(){
     var catalog = document.querySelector(".header-catalog-div");
     var catalogButton = document.querySelector(".catalog-button");
 
+    
+
     catalogButton.addEventListener("click", function(){
 
         if(catalog.classList.contains("catalog-hide") && !catalogButton.classList.contains("catalog-button-animation")){
