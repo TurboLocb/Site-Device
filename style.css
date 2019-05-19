@@ -1648,6 +1648,22 @@ footer a:focus{
     text-transform: uppercase;
 }
 
+.catalog-Gilroy-extra-bold-no-uppercase{
+    font-family: 'Gilroy';
+    
+    font-size: 16px;
+    
+    margin: 0;
+
+    margin-bottom: 30px;
+}
+
+.catalog-Open-Sans-light{
+    font-family: 'Open-Sans';
+
+    font-size: 14px;    
+}
+
 .catalog{
     max-height: 190px;
 }
@@ -1696,6 +1712,181 @@ footer a:focus{
     margin: 0 0 0 auto;
     
     padding: 0 0 0 60px;
+}
+
+.filter-black-line{
+    margin: 0;   
+    margin-top: 70px;
+    margin-bottom: 16px; 
+
+    padding: 0;
+
+    height: 2px;
+    width: 200px;
+    background-color: black;
+}
+
+.third-black-line{
+    margin-top: 40px;
+    margin-bottom: 16px;
+}
+
+.filter-container input[type=range] {
+    -webkit-appearance: none;
+    width: 200px;
+    margin: 0 0;
+    margin-right: auto;
+}
+
+.filter-container input[type=range]:focus {
+    outline: none;
+}
+
+.filter-container input[type=range]::-webkit-slider-runnable-track {
+    width: 100%;
+    height: 2px;
+    cursor: pointer;    
+    background: #91c92f;
+    border-radius: 1.3px;
+    border: 0px;
+  }
+
+.filter-container input[type=range]::-webkit-slider-thumb {
+    box-shadow: 0px 0px 0px #000000, 0px 0px 0px #0d0d0d;
+    border: 0px solid #000000;
+    height: 22px;
+    width: 20px;
+    border-radius: 50px;
+    background: #ffffff;
+    cursor: pointer;
+    -webkit-appearance: none;
+    margin-top: -10.2px;
+}
+
+.filter-container input[type=range]:focus::-webkit-slider-runnable-track {
+    background: #9fd343;
+}
+
+.filter-container input[type=range]::-moz-range-track {
+    width: 100%;
+    height: 2px;
+    cursor: pointer;    
+    background: #91c92f;
+    border-radius: 1.3px;
+    border: 0px solid #010101;
+}
+
+input[type=range]::-moz-range-thumb {
+    box-shadow: 0px 0px 0px #000000, 0px 0px 0px #0d0d0d;
+    border: 0px solid #000000;
+    height: 22px;
+    width: 20px;
+    border-radius: 50px;
+    background: #ffffff;
+    cursor: pointer;
+}
+
+input[type=range]::-ms-track {
+    width: 100%;
+    height: 2px;
+    cursor: pointer;
+    background: transparent;
+    border-color: transparent;
+    color: transparent;
+}
+
+.filter-container input[type=range]::-ms-fill-lower {
+    background: #7fb029;
+    border: 0.2px solid #010101;
+    border-radius: 2.6px;
+    box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+}
+
+.filter-container input[type=range]::-ms-fill-upper {
+    background: #91c92f;
+    border: 0.2px solid #010101;
+    border-radius: 2.6px;
+    box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+}
+
+.filter-container input[type=range]::-ms-thumb {
+    box-shadow: 0px 0px 0px #000000, 0px 0px 0px #0d0d0d;
+    border: 0px solid #000000;
+    height: 22px;
+    width: 20px;
+    border-radius: 50px;
+    background: #ffffff;
+    cursor: pointer;
+    height: 2px;
+}
+
+.filter-container input[type=range]:focus::-ms-fill-lower {
+    background: #91c92f;
+}
+
+.filter-container input[type=range]:focus::-ms-fill-upper {
+    background: #9fd343;
+}
+  
+/* Кастомные чекбоксы в фильтре */
+.filter-container-checkbox{
+    display: flex;
+    align-items: center;
+    
+    margin-bottom: 17px;
+}
+
+.filter-container-checkbox label{
+    margin-right: 18px;
+}
+
+.filter-container-checkbox label input[type="checkbox"]{
+    display: none;
+}
+
+.filter-container-checkbox label input+div{
+    width: 23px;
+    height: 23px;
+
+    border: 2px solid black;   
+    border-radius: 2px;
+
+    background-color: transparent;
+}
+
+.filter-container-checkbox label div{
+    position: relative;
+}
+
+.filter-container-checkbox label input:checked + div:before{
+    content: '';
+    position: absolute; 
+    left: 3px;
+    top: 10px;
+
+    width: 13px;
+    height: 5px;
+
+    background: black;
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);    
+}
+.filter-container-checkbox label input:checked + div:after{
+    content: '';
+    position: absolute;
+    box-sizing: border-box;
+
+    left: 8px;
+    top: 6px;
+
+    width: 22px;
+    height: 5px;
+
+    box-shadow: 6px 0px 0px 2px rgb(238, 238, 238);
+
+    background: black;
+    -webkit-transform: rotate(-45deg);
+    transform: rotate(-45deg);       
 }
 
 /*
@@ -1807,10 +1998,10 @@ footer a:focus{
 
     margin-top: -9px;
 } 
+
 .sorting-type-button div.second-type:after{
     content: "По типу";
-} 
-
+}
 .sorting-type-button div.third-type::after{
     content: "По популярности";
 } 
@@ -1818,6 +2009,8 @@ footer a:focus{
 .sorting-type-button input:checked+div{
     opacity: 1;
 }
+
+/* Стрелочки для направления сортировки*/
 
 .sorting-direction{
     position: relative;
@@ -1977,6 +2170,18 @@ footer a:focus{
     margin-top: 70px;
 
     height: 420px;
+}
+
+.item-description{
+    font-family: 'Gilroy';
+    font-size: 18px;
+    font-weight: bolder;
+}
+
+.item-price{
+    font-family: 'Gilroy';
+    font-size: 18px;
+    font-style: italic;
 }
 
 .item div{
