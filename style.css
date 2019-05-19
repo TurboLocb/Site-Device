@@ -1888,6 +1888,112 @@ input[type=range]::-ms-track {
     -webkit-transform: rotate(-45deg);
     transform: rotate(-45deg);       
 }
+/* Кастомные радиобаттоны в фильтре */
+.filter-container-radiobutton{
+    display: flex;
+    align-items: center;
+
+    margin-bottom: 17px;
+}
+
+.filter-container-radiobutton label{
+    margin-right: 18px;
+}
+
+.filter-container-radiobutton label input{
+    display: none;
+}
+
+.filter-container-radiobutton label input+div{
+    width: 24px;
+    height: 24px;
+
+    background: black;
+
+    border-radius: 50%;
+}
+
+.filter-container-radiobutton label div{
+    position: relative;    
+}
+
+.filter-container-radiobutton label div::before{
+    content: "";
+    position: absolute;
+
+    top: 50%;
+    left: 50%;
+
+    margin-top: -8px;
+    margin-left: -8px;
+
+    height: 16px;
+    width: 16px;
+    border-radius: 50%;
+
+    background-color: rgb(238, 238, 238);
+}
+
+.filter-container-radiobutton label input:checked + div::after{
+    content: "";
+    position: absolute;
+
+    top: 50%;
+    left: 50%;
+
+    margin-top: -4px;
+    margin-left: -4px;
+
+    height: 8px;
+    width: 8px;
+    border-radius: 50%;
+
+    background-color: black;
+}
+/* Кнопка "Показать" */
+.show-button{
+    position: relative;
+    z-index: 1;
+    font-family: 'Gilroy';
+    font-size: 18px;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+
+    border: 0px;
+
+    background-color: transparent;
+
+    padding: 0px;
+
+    width: 200px;
+    height: 40px;
+
+    text-align: center;
+
+    margin-top: 50px;
+}
+
+.show-button::after{
+    content: "";
+
+    position: absolute;
+
+    width: 200px;
+    height: 8px;
+
+    background-color: rgb(240, 197, 46);
+
+    left: 0;
+    top: 50%;
+
+    margin-top: -4px;
+
+    z-index: -1;
+}
+
+.show-button:hover{
+    background-color: rgb(240, 197, 46);
+}
 
 /*
     Блок "Сортировка" вместе с товарами для продажи
