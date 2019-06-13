@@ -1,0 +1,2444 @@
+@import url("animation.css");
+
+@font-face{
+    font-family: 'Gilroy';
+
+    src: url("fonts/gilroylight.woff") format("woff");
+
+    src: url("fonts/gilroylight.woff2") format("woff2");
+
+    font-weight: lighter;
+
+    font-style: italic;
+
+}
+
+@font-face{
+    font-family: 'Gilroy';
+
+    src: url("fonts/gilroyextrabold.woff") format("woff");
+
+    src: url("fonts/gilroyextrabold.woff2") format("woff2");
+
+    font-weight: bolder;
+
+    font-style: normal;
+
+}
+
+@font-face{
+    font-family: 'Open-Sans';
+
+    src: url("fonts/opensans.woff") format("woff");
+
+    src: url("fonts/opensans.woff2") format("woff2");
+
+    font-weight: normal;
+
+    font-style: normal;
+
+}
+
+@font-face{
+    font-family: 'Open-Sans';
+
+    src: url("fonts/opensanslight.woff") format("woff");
+
+    src: url("fonts/opensanslight.woff2") format("woff2");
+
+    font-weight: lighter;
+
+    font-style: normal;
+
+}
+
+body{
+    margin: 0;
+}
+
+.container{
+    width: 1160px;
+    margin: 0 auto;
+}
+
+article{
+    position: relative;
+}
+
+/* Формируем хедер */
+header{
+    position: relative;
+
+    display: flex;
+
+    max-width: 1160px;
+    max-height: 300px;
+
+    background-color: rgb(247,  226, 150);
+
+    margin-top: 41px;
+
+    padding: 0 60px;
+
+    justify-content: space-between;
+}
+
+
+header ul{
+    list-style: none;
+
+    margin: 0 0;
+    padding: 0 0;
+
+}
+
+.device{
+    font-family: 'Gilroy';
+    
+    font-size: 48px;
+
+    position: absolute;
+
+    left: 60px;
+    top: -33px;
+
+    margin: 0;
+
+    color: black;
+
+    text-decoration: none;
+}
+
+.header-Gilroy-extra-bold{
+    font-family: 'Gilroy';
+    
+    font-size: 18px;
+
+    line-height: 24px;
+
+    letter-spacing: 4px;
+
+    text-transform: uppercase;
+}
+
+header input{
+    font-family: 'Open-Sans';
+
+    font-weight: lighter;
+    font-size: 15px;
+
+    border: 0px;
+    background-color: transparent;
+    
+    color: black;
+
+    opacity: 0.3;
+
+    transition: opacity, 0.5s, ease-in-out, 0.5s;
+}
+
+.functional{
+    font-family: 'Open-Sans';
+
+    font-weight: lighter;
+    font-size: 15px;
+    
+    margin-top: 60px;
+    margin-bottom: 30px;
+    line-height: 19px;
+
+    display: flex;    
+    justify-content: space-between;
+}
+
+.functional-2-white-line{ 
+    position: absolute;
+
+    width: 100px;
+    height: 7px;
+
+    background-color: white;
+
+    left: 0;
+    bottom: -92px;
+}
+
+.header-first-div{
+    width: 500px;
+    height: 300px;
+}
+
+.header-first-div-inner{
+    display: flex;
+    align-items: center;
+
+    position: relative;
+
+    width: 440px;
+    height: 50px;   
+
+    margin-top: 40px;
+    margin-bottom: 20px;
+}
+
+.header-first-div-inner-inside-right{
+    position: relative;
+
+    height: 100%;
+    
+    margin-left: auto;
+}
+
+.search-button-hide{
+    display: none;
+}
+
+.header-first-div-search-button{
+    display: inline-block;
+    box-sizing: border-box;
+
+    padding: 0px;
+
+    width: 85px;
+    height: 100%;
+
+    border-width: 2px;
+    border-color: black;
+
+    background-color: transparent;
+}
+
+.header-first-div-search-button-underline{
+    position: absolute;
+
+    width: 440px;
+    height: 2px;
+
+    bottom: 0;
+    right: 0;
+
+    background-color: black;
+}
+
+.header-first-div input{
+    line-height: 19px;  
+    margin: 0;
+    margin-left: 40px;
+    padding: 0;
+}
+
+.header-first-div input:focus{
+    outline: 0;
+	outline-color: transparent;	
+}
+
+.search-span{
+    display: flex;
+}
+
+.span-margin-right{
+    margin-right: 10px;
+}
+
+.header-second-div{
+    width: 500px;
+    height: 300px;
+}
+
+.header-hidden-span{
+    display: none;
+}
+
+.header-catalog-ul{
+    display: flex;
+    align-items: center;
+}
+
+.catalog-button{
+    position: relative;
+
+    height: 16px;
+    width: 16px;
+
+    margin-left: 11px;
+
+    background: transparent;
+    border-color: transparent;
+}
+
+.catalog-button:focus{
+    outline: 0;
+	outline-color: transparent;	
+}
+
+.catalog-button:hover{
+    cursor: pointer;
+}
+
+/* Анимация сдигания клавиши */
+.catalog-button-animation{
+    animation: blink 0.2s;
+}
+
+.catalog-button-reverse-animation{
+    animation: reverseblink 0.2s;
+}
+
+.catalog-button::before,
+.catalog-button::after{
+    content: "";
+
+    position: absolute;
+
+    width: 3px;
+    height: 16px;
+
+    background-color: rgb(184, 164, 116);
+
+    top: -2px;
+    left: 5px;
+}
+
+.catalog-button::after{
+    transform: rotate(90deg);
+}
+
+/* Формируем каталог в хедере */
+.header-catalog-div{
+    position: absolute;
+    top: 170px;
+    left: 0;
+    
+    height: 130px;
+    width: 1100px;
+
+    background-color: rgb(247,  226, 150);
+
+    font-family: 'Open-Sans';
+
+    font-weight: lighter;
+
+    font-size: 15px;
+
+    z-index: 2;
+    
+    padding-left: 60px;
+}
+
+.header-catalog-div-inner{
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;    
+
+    height: 130px;
+    width: 550px;
+}
+
+.header-catalog-div-inner ul li{
+    font: inherit;
+    
+    margin-bottom: 20px;
+}
+
+.header-catalog-div-inner ul li a{
+    margin: 0;
+    padding: 0;
+
+    text-decoration: none;
+    color: inherit;
+}
+
+.catalog-hide{
+    display: none;
+}
+/* 
+
+    Артикл в боди 
+
+*/ 
+
+article h1{
+    font-family: 'Gilroy';    
+    font-size: 48px;
+}
+
+article p{
+    font-family: 'Open-Sans';
+
+    font-weight: lighter;
+    font-size: 15px;
+}
+
+.products{
+    height: 380px;
+}
+
+.description-01,
+.description-02,
+.description-03{
+    font-family: 'Gilroy';
+   
+    font-size: 179px;   
+
+    margin: 0px;
+    padding: 0px;
+
+    color: white;   
+}
+
+.products-description-with-h1{
+    position: relative;
+
+    margin-bottom: 34px;
+}
+
+.products-buttons{    
+    margin-bottom: 58px;
+}
+
+.products-buttons-radiobutton-div{
+    position: absolute;
+
+    top: 238px;
+    right: 80px;
+
+    display: flex;
+    justify-content: space-between;
+
+    align-items: center;
+
+    width: 80px;
+
+    margin-right: 10px;
+
+    z-index: 2;
+}
+
+.products-button-more{
+    position: relative;
+    z-index: 1;
+    font-family: 'Gilroy';
+    font-size: 18px;    
+    text-transform: uppercase;
+
+    border: 0px;
+
+    background-color: transparent;
+
+    padding: 0px;
+
+    width: 220px;
+    height: 40px;
+
+    text-align: center;
+}
+
+.products-button-more::after{
+    content: "";
+
+    position: absolute;
+
+    width: 220px;
+    height: 8px;
+
+    background-color: rgb(240, 197, 46);
+
+    left: 0;
+    top: 50%;
+
+    margin-top: -4px;
+
+    z-index: -1;
+}
+
+.products-button-more:hover{
+    cursor: pointer;
+    background-color: rgb(240,  197, 46);
+}
+
+.products-button-more:focus{
+    outline: 0px;
+    outline-color: transparent;
+}
+
+.radio-button-span{
+    display: none;
+}
+
+.radio-button{
+    width: 12px;
+    height: 12px;
+
+    margin: 0;
+    padding: 0;
+}
+
+/* Первый слайд (с селфи палкой) и некоторые общие параметры для всех 3-ех слайдов */
+.products-description-one,
+.products-description-two,
+.products-description-three{
+    display: flex;
+    justify-content: space-between;   
+}
+
+.products-description-one-left-side,
+.products-description-two-left-side,
+.products-description-three-left-side{
+    position: relative;
+
+    height: 490px; 
+    width: 400px;
+
+    background-image: url("images/sliders/slider-1.png");
+    background-repeat: no-repeat;
+    background-position: center;
+
+    margin-left: 80px;
+
+    top: -120px;
+}
+
+.products-description-one-right-side,
+.products-description-two-right-side,
+.products-description-three-right-side{
+    position: relative;
+
+    width: 480px;
+
+    margin-right: 80px;
+
+    top: -34px;;
+}
+
+.products-description-one-h1,
+.products-description-two-h1,
+.products-description-three-h1{
+    position: relative;    
+    margin: 0;
+    padding: 0;    
+}
+
+.description-01,
+.description-02,
+.description-03{
+    position: absolute;
+
+    top: -110px;
+    right: -33px; 
+}
+
+.products-description-first-p{
+    margin-top: 0;
+}
+
+.products-description-second-p{
+    margin-bottom: 51px;
+}
+
+/* Второй слайд с фитнес-браслетом */
+.products-description-two-left-side{
+    background-image: url("images/sliders/slider-2.png");
+}
+
+.description-02{
+    position: absolute;
+
+    top: -110px;
+    right: -33px;
+}
+
+/* Третий слайд с квадрокоптером */
+.products-description-three-left-side{
+    background-image: url("images/sliders/slider-3.png");
+
+    width: 530px;
+
+    margin-left: 30px;
+}
+
+.description-03{
+    position: absolute;
+
+    top: -110px;
+    right: -10px;
+
+    z-index: -1;
+}
+
+.products-description-three-right-side{
+    position: relative;
+
+    width: 502px;
+
+    margin-right: 58px;
+
+    top: -34px;
+
+    z-index: 0;
+}
+
+.hide-slide{
+    display: none;
+}
+
+/* 
+
+    Блок productions
+
+*/
+
+.productions{
+    margin-top: 110px;
+}
+
+.productions ul li div{
+    height: 160px;
+    width: 160px;
+    background-color: rgb(250, 226, 150);
+    background-position: center;
+    background-repeat: no-repeat;
+
+    transition: background-color, 0.3s, ease-in-out, 0.8s;
+}
+
+.pop-1{
+    background: url("images/productions/popular-1.svg");
+}
+
+.pop-2{
+    background: url("images/productions/popular-2.svg");    
+}
+
+.productions ul li .pop-2{
+    background-position-y: 40px;
+}
+
+.pop-3{
+    background: url("images/productions/popular-3.svg");
+}
+
+.pop-4{
+    background: url("images/productions/popular-4.svg");
+}
+
+.pop-5{
+    background: url("images/productions/popular-5.svg");
+}
+
+.pop-6{
+    background: url("images/productions/popular-6.svg");
+}
+
+.productions ul{
+    display: flex;
+    justify-content: space-between;
+
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.productions li h2{
+    font-family: 'Gilroy';
+    
+    font-style: normal;
+    font-size: 18px;
+
+    margin: 0;
+    padding: 0;
+
+    margin-top: 37px;
+}
+
+.article-div-with-characteristics{
+    display: flex;
+}
+
+.article-characteristic-div h2{
+    font-family: 'Gilroy';
+
+    font-weight: lighter;
+    font-style: italic;
+    font-size: 36px;
+
+    margin: 0;
+}
+
+.article-characteristic-div p{
+    font-size: 13px;
+
+    margin: 0;
+    margin-top: 10px;
+}
+
+/* Блок доставка, гарантия и т.д.*/
+
+.delivery{
+    position: relative;
+
+    background-color: rgb(229, 229, 229);
+    max-height: 290px;
+}
+
+.delivery .container{
+    display: flex;
+    position: relative;
+}
+
+.delivery ul{
+    position: absolute;
+    top: -20px;
+
+    display: flex;
+    flex-direction: column;
+
+    justify-content: space-between;
+
+    height: 168px;
+
+    margin: 0;
+    padding: 0;   
+}
+
+.delivery ul li{   
+    width: 160px;
+    height: 40px;
+
+    list-style: none;
+}
+
+.delivery ul li button{
+    position: relative;
+
+    box-sizing: border-box;
+
+    font-family: 'Gilroy';
+
+    font-size: 18px;  
+    
+    letter-spacing: 4px;
+    
+    width: 100%;
+    height: 100%;
+
+    text-transform: uppercase;    
+
+    line-height: 40px;
+    
+    z-index: 1;
+    
+    border: 0;
+    background-color: transparent;
+
+    padding: 0;
+}
+
+.delivery ul li button:first-child{
+    padding-left: 20px;
+    text-align: left;
+}
+.delivery ul li:nth-child(2) button{
+    padding-left: 25px;
+    text-align: left;
+}
+.delivery ul li:nth-child(3) button{
+    padding-left: 38px;
+    text-align: left;
+}
+
+.delivery ul li button:hover{
+    cursor: pointer;
+    background-color: rgb(240,  197, 46);
+}
+
+.delivery-line{
+    content: "";    
+    position: absolute;    
+
+    height: 8px;
+    width: 160px;
+    background-color: rgb(240,  197, 46);
+
+    top: 50%;
+    left: 0;
+    
+    margin: 0;
+    margin-top: -4px;
+
+    z-index: -1;
+}
+
+.line-change-background-color{
+    background-color: black;
+}
+
+.delivery ul li button:first-child:focus{
+    cursor: pointer;
+
+    display: inline-block;
+
+    height: 40px;
+    width: 280px;
+
+    background-color: black;
+    color: rgb(247,225,132);
+
+    text-transform: uppercase;
+
+    padding-left: 20px;    
+    
+    line-height: 40px;
+
+    text-align: left;
+
+    outline: 0;
+    outline-color: transparent;
+}
+
+.delivery ul li:nth-child(2) button:focus{
+    cursor: pointer;
+
+    display: inline-block;
+
+    height: 40px;
+    width: 280px;
+
+    background: black;
+    color: rgb(247,225,132);
+
+    text-transform: uppercase;
+
+    padding-left: 25px;    
+    
+    line-height: 40px;
+
+    text-align: left;
+
+    outline: 0;
+    outline-color: transparent;
+}
+
+.delivery ul li:nth-child(3) button:focus{
+    cursor: pointer;
+
+    display: inline-block;
+
+    height: 40px;
+    width: 280px;
+
+    background: black;
+    color: rgb(247,225,132);
+
+    text-transform: uppercase;
+
+    padding-left: 38px;    
+    
+    line-height: 40px;
+
+    text-align: left;
+
+    outline: 0;
+    outline-color: transparent;
+}
+
+.delivery-div{
+    position: relative;
+
+    height: 290px;
+    width: 460px;
+    
+    margin-left: 400px;
+}
+
+.delivery-div h1{
+    font-family: 'Gilroy';
+
+    position: absolute;
+
+    top: -32px;
+    left: 0;
+
+    font-size: 47px;
+
+    margin: 0;
+}
+
+.delivery-div p{
+    font-family: 'Open-Sans';
+
+    font-size: 15px;
+    font-weight: lighter;
+
+    max-height: 77px;
+
+    margin: 0;
+    margin-top: 60px;
+
+    line-height: 24px;
+}
+
+.vertical-line{
+    position: absolute;
+    top: -80px;
+    left: 280px;
+
+    margin: 0;
+    padding: 0;
+
+    width: 8px;
+    height: 320px;
+
+    background-color: black;
+}
+
+.delivery-img{
+    position: absolute;
+    top: -15px;
+    right: 60px;
+}
+
+/* Блок с логотипами */
+.logos ul{
+    display: flex;
+
+    justify-content: space-between;
+
+    margin: 0;
+    padding: 0;    
+}
+
+.logos ul li div img{
+    opacity: 0;
+
+    transition: opacity, 0.3s, ease-out, 0.8s;
+}
+
+.logos ul li div img:hover{
+    opacity: 1;
+}
+
+.logos li{
+    list-style: none;
+}
+
+.logos{
+    margin: 100px 0px;
+}
+
+.no-color-logo{   
+    height: 100px;
+    width: 260px;
+}
+
+.dji{
+    background-image: url("images/logos/logo-1.jpg");
+}
+.spgates{
+    background-image: url("images/logos/logo-2.jpg");
+}
+.gopro{
+    background-image: url("images/logos/logo-3.jpg");
+}
+.vive{
+    background-image: url("images/logos/logo-4.jpg");
+}
+
+
+
+/* Блок О нас и Контакты */
+.about-and-contacts{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.about-and-contacts h1{
+    position: relative;
+
+    font-family: 'Gilroy';
+
+    font-size: 47px;    
+
+    margin: 0;
+    margin-bottom: 54px;
+}
+
+.about-and-contacts h1::after{
+    content: '';
+
+    position: absolute;
+
+    top: -51px;
+    left: 0;
+
+    width: 80px;
+    height: 7px;
+
+    background-color: black;
+}
+
+.about-and-contacts .about .about-p1{
+    margin-bottom: 35px;
+}
+
+.about-and-contacts .about .about-p2{
+    margin-bottom: 83px;
+}
+
+.about-and-contacts .contacts .contacts-p1{
+    margin-bottom: 35px;
+}
+
+.about-and-contacts p{
+    font-family: 'Open-Sans';
+
+    font-size: 15px;
+    font-weight: lighter;
+
+    line-height: 25px;
+    
+    margin: 0;
+}
+
+.about-and-contacts .transport-company{
+    font-family: 'Gilroy';
+
+    font-size: 16px;    
+
+    list-style: none;
+
+    margin: 0;
+    padding: 0;
+    margin-bottom: 75px;
+}
+
+.about-and-contacts .transport-company li{
+    display: flex;
+    align-items: center;
+
+    margin-bottom: 20px;
+    /* margin-left: 40px; */
+}
+
+.about-and-contacts .transport-company li span{
+    position: relative;
+
+    width: 10px;
+    height: 10px;
+
+    background-color: rgb(228, 228, 228);   
+    border-radius: 50%;
+
+    margin-right: 30px;
+}
+
+.about-and-contacts .transport-company li span::after{
+    content: "";
+
+    position: absolute;
+
+    width: 6px;
+    height: 6px;
+
+    background-color: rgb(255, 255, 255); 
+    border-radius: 50%;
+    
+    top: 50%;
+    left: 50%;
+    
+    margin-left: -3px;
+    margin-top: -3px;
+}
+
+
+.about-and-contacts button{
+    position: relative;
+    z-index: 1;
+
+    font-family: 'Gilroy';
+
+    font-size: 18px;    
+    text-transform: uppercase;
+
+    border: 0px;
+    background-color: transparent;
+
+    padding: 0px;
+    width: 260px;
+    height: 40px;
+    text-align: center;    
+}
+
+.about-and-contacts button::after{
+    content: "";
+    position: absolute;
+
+    width: 260px;
+    height: 8px;
+
+    background-color: rgb(240,  197, 46);
+
+    left: 0;
+    top: 50%;
+
+    margin-top: -4px;
+
+    z-index: -1;
+}
+
+.about-and-contacts button:focus{
+    outline: 0;
+    outline-color: transparent;    
+}
+
+.about-and-contacts button:hover{
+    cursor: pointer;
+    background-color: rgb(240,  197, 46);	
+}
+
+.about{
+    width: 560px;
+}
+
+.contacts{
+    width: 560px;
+}
+
+.contacts iframe{
+    margin-bottom: 78px;
+}
+
+/* Футер */
+footer{  
+    margin-top: 92px;
+    padding: 0;
+
+    width: 100%;
+    
+    background-color: rgb(70, 70, 70);
+}
+
+footer .container{
+    display: flex;
+}
+
+footer ul{
+    list-style: none;
+    
+    margin: 0;
+    padding: 0;
+}
+
+.footer-first-div{
+    width: 300px;
+    height: 323px;
+
+    margin-right: 60px;
+}
+
+.footer-first-div h1{
+    font-family: 'Gilroy';
+
+    font-size: 48px;    
+
+    line-height: 48px;
+
+    color: rgb(255, 198, 0);
+
+    max-width: 170px;
+
+    margin-top: 60px;
+    margin-bottom: 35px;
+}
+
+.footer-first-div h1 a{
+    padding: 0;
+    margin: 0;
+    
+    text-decoration: none;
+
+    color: inherit;
+}
+
+.footer-first-div p{
+    font-family: 'Open-Sans';
+
+    font-size: 15px;
+    font-weight: lighter;
+
+    line-height: 15px;
+    
+    margin: 0;
+}
+
+.adress-footer{
+    max-width: 210px;
+}
+
+.footer-first-div figure{
+    margin: 0;
+    margin-top: 80px;
+    padding: 0;
+
+    width: 80px;
+    height: 8px;
+
+    background-color: rgb(255, 198, 0);
+}
+
+.footer-first-div figure span{
+    display: none;
+}
+
+.footer-second-div{
+    font-family: 'Gilroy';
+
+    font-size: 18px;    
+
+    width: 440px;
+    height: 323px;
+
+    padding: 0 7px;
+}
+
+.footer-second-div .first-ul{
+    display: flex;
+    justify-content: space-between;    
+    margin-top: 142px;
+}
+
+.footer-second-div .first-ul li{ 
+    font: inherit;
+    text-transform: uppercase;
+
+    line-height: 18px;
+    
+    letter-spacing: 3px;
+}
+
+.footer-second-div .second-ul{
+    display: flex;
+    justify-content: space-between;
+
+    width: 160px;
+
+    padding: 0 10px;
+    margin-top: 70px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.footer-second-div .second-ul li{
+    width: 33px;   
+    height: 33px;   
+}
+
+/* Скрытые названия социальных кнопок */
+.footer-second-div .second-ul li span{
+    display: none;
+}
+
+.social-button{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    height: 33px;
+    width: 33px;
+
+    border-radius: 50%;
+
+    background-color: rgb(126, 126, 126);
+
+    transition: background-color, 0.5s, ease-out, 0.8s;
+}
+
+.social-button:hover{
+    background-color: white;    
+}
+
+.footer-third-div{    
+
+    font-family: 'Open-Sans';
+
+    font-size: 15px;
+    font-weight: lighter;
+
+    width: 360px;
+    height: 323px;
+}
+
+.third-div-ul{
+    display: flex;
+    justify-content: space-between;
+
+    font: inherit;
+
+    width: 326px;
+
+    margin-top: 72px;
+    margin-left: auto;
+}
+
+.third-div-ul li{
+    line-height: 15px;
+}
+
+.third-div-ul li span{
+    margin-right: 12px;
+}
+
+.telephone-number{
+    margin: 0;
+    margin-top: 52px;   
+
+    line-height: 15px;
+
+    margin-bottom: 75px;
+    margin-left: auto;
+
+    max-width: 170px;
+}
+
+.html-academy-logo-a{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    width: 30px;
+    height: 38px;
+    
+    margin: 0;
+
+    float: right;
+}
+
+/* Задаем белый цвет для нужных элементов в футере */
+.footer-first-div p,
+.footer-second-div .first-ul li,
+.footer-third-div .third-div-ul li,
+.footer-third-div .telephone-number{
+    color: white;
+}
+
+
+/* Межбуквенный интервал кнопок */
+.products-button-more,
+.about button,
+.contacts button{
+    letter-spacing: 4px;
+}
+
+/* Различные popup'ы */
+.write-us-popup{
+    position: fixed;
+
+    display: flex;
+    flex-direction: column;
+    
+    box-sizing: border-box;
+
+    top: 50%;
+    left: 50%;
+
+    margin-top: -277px; /* ~1/2*height */
+    margin-left: -480px;
+
+    height: 553px;
+    width: 960px;
+
+    background-color: white;
+
+    z-index: 3;
+    padding: 91px 100px;
+
+    box-shadow: 0px 20px 40px -20px black;
+}
+
+.write-us-popup-first-row{
+    display: flex;
+    justify-content: space-between;
+}
+
+/* Поля 'Имя Фамилия' и 'email' */
+
+/* Задаем шрифты */
+.write-us-popup label{
+    font-family: 'Gilroy';
+    font-size: 18px;    
+}
+
+.write-us-popup input, textarea{
+    font-family: 'Open-Sans';
+    font-size: 14px;
+    font-weight: normal;
+    color: rgb(70, 70, 70);
+}
+
+/* Размеры блоков */
+.write-us-popup-first-row input{
+    display: inline-block;
+    box-sizing: border-box;
+
+    height: 50px;
+    width: 360px;
+
+    background-color: rgb(242, 242, 242);
+
+    padding-top: 18px;
+    padding-bottom: 21px;
+    padding-left: 19px;
+    padding-right: 19px;
+
+    margin-top: 11px;
+
+    border: 0;
+}
+
+.userTextField{
+    display: inline-block;
+    box-sizing: border-box;
+
+    height: 156px;
+    width: 760px;
+
+    background-color: rgb(242, 242, 242);
+
+    padding: 21px 18px;
+
+    margin-top: 11px;
+
+    border: 0;
+}
+
+/* Позиционирование блоков, внутри этих блоков */
+.write-us-popup-first-row div{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 37px;
+}
+.write-us-popup-second-row{
+    display: flex;
+    flex-direction: column;
+}
+
+/* Кнопки */
+.write-us-popup-submit-button{
+    position: relative;
+    z-index: 1;
+    font-family: 'Gilroy';
+    font-size: 18px;   
+    text-transform: uppercase;
+
+    letter-spacing: 4px;
+
+    border: 0px;
+
+    background-color: transparent;
+
+    padding: 0px;
+    margin-top: 22px;
+
+    width: 220px;
+    height: 40px;
+
+    text-align: center;
+}
+
+.write-us-popup-submit-button:focus{
+    outline: 0;
+    outline-color: transparent;	
+}
+
+.write-us-popup-submit-button:hover{
+    cursor: pointer;	
+}
+
+.write-us-popup-submit-button::after{
+    content: "";
+    position: absolute;
+    width: 220px;
+    height: 8px;
+    background-color: rgb(240, 197, 46);
+    left: 0;
+    top: 50%;
+    margin-top:-4px;
+    z-index: -1;
+}
+
+.write-us-popup-close-button{
+    position: absolute;
+
+    top: 22px;
+    right: 22px;
+
+    height: 55px;
+    width: 55px;
+
+    border: 0px;
+    border-radius: 50%;
+
+    background-color: rgb(247, 226, 150);
+}
+
+.write-us-popup-close-button:focus{
+    outline: 0;
+    outline-color: transparent;	
+}
+
+.write-us-popup-close-button:hover{
+    cursor: pointer;
+    background-color: rgb(240, 197, 46);	
+}
+
+.write-us-popup-close-button::before,
+.write-us-popup-close-button::after{
+    content: '';
+    position: absolute;
+
+    background-color: white;
+
+    height: 30px;
+    width: 4px;
+
+    top: 50%;
+    right: 50%;
+
+    margin-top: -15px;
+    margin-right: -2px;
+
+    transform: rotate(-45deg);
+}
+
+.write-us-popup-close-button::before{
+    transform: rotate(45deg);
+}
+
+.write-us-popup-close-button span{
+    display: none;
+}
+
+.popup-hide{
+    display: none;
+}
+
+
+/* 
+
+    Обработка действий совершаемых над элементами хедера
+
+*/
+
+header ul li:hover,
+header a:hover{
+    cursor: pointer;
+    opacity: 0.6;
+}
+
+header ul li:focus,
+header a:focus{
+    opacity: 0.3;
+}
+
+header input:hover{
+    opacity: 0.6;
+}
+
+header input:focus{
+    opacity: 1;
+    color: black;
+}
+
+.header-first-div-search-button:hover{
+    background-color: black;
+    color: white;
+}
+
+.header-first-div-search-button:focus{
+    outline: 0;
+    outline-color: transparent;
+    background-color: black;
+    color: rgba(255, 255, 255, 0.3);       
+}
+
+/* 
+
+    Обработка действий совершаемых над элементами блока productions
+
+*/
+.productions ul li div:hover{
+    cursor: pointer;
+    background-color: rgb(240,  197, 46);
+}
+
+.productions ul li h2:hover{
+    cursor: pointer;
+}
+
+.productions ul li:focus-within{
+    outline: 0;
+    outline-color: transparent;
+
+    cursor: pointer;
+    opacity: 0.3;
+}
+
+/* 
+
+    Обработка действий совершаемых над элементами футера
+
+*/
+footer h1:hover,
+footer ul li:not(.social-button-li):hover,
+footer p:hover,
+footer a:not(.social-button):not(.device-footer):hover{
+    cursor: pointer;
+    opacity: 0.6;
+}
+
+footer h1:focus,
+footer ul li:focus,
+footer p:focus,
+footer a:focus{
+    outline: 0;
+    outline-color: transparent;
+
+    opacity: 0.3;
+}
+
+/* 
+
+    Обработка действий совершаемых над элементами блока write-us-popup
+
+*/
+.write-us-popup input:hover,
+.write-us-popup textarea:hover{
+    background-color: rgb(234, 234, 234);    
+}
+
+.write-us-popup-submit-button:hover{
+    background-color: rgb(240,  197, 46);
+}
+
+.write-us-popup input:focus,
+.write-us-popup textarea:focus{
+    background-color: white;
+    outline-color: rgb(247,  226, 150);
+}
+
+.write-us-popup-close-button:focus{
+    opacity: 0.3;
+}
+
+
+/* 
+
+    Селекторы для "Каталога"
+
+*/
+.catalog-Gilroy-extra-bold{
+    font-family: 'Gilroy';
+    
+    font-size: 16px;
+
+    line-height: 24px;
+
+    letter-spacing: 4px;
+
+    text-transform: uppercase;
+}
+
+.catalog-Gilroy-extra-bold-no-uppercase{
+    font-family: 'Gilroy';
+    
+    font-size: 16px;
+    
+    margin: 0;
+
+    margin-bottom: 30px;
+}
+
+.catalog-Open-Sans-light{
+    font-family: 'Open-Sans';
+
+    font-size: 14px;
+    
+    color: black;}
+
+
+.catalog{
+    max-height: 190px;
+}
+
+.central-block{
+    display: flex;
+    justify-content: center;
+}
+
+/* Блок с навигацией и заголовком */
+.navigation-div{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    box-sizing: border-box;
+
+    width: 1160px;
+    height: 180px;
+
+    margin: 0 auto;
+    padding-left: 60px;
+    padding-top: 36px;
+    padding-bottom: 48px;
+}
+
+.navigation{
+	display: flex;
+    align-items: flex-end;
+}
+.navigation a{
+    opacity: 0.3;
+}
+
+.navigation-div h1{
+	font-family: 'Gilroy';
+	font-weight: bolder;
+	font-size: 47px;
+	
+	margin: 0;
+	padding: 0;	
+}
+
+.navigation-arrow{
+	position: relative;
+	
+	height: 14px;
+	width: 14px;
+	
+	margin: 0 5px;
+}
+
+.navigation-arrow::after{
+	content: "";
+	display: block;
+	
+	position: absolute;
+	
+	height: 2px;
+	width: 6px;
+	
+    bottom: 50%;
+    left: 50%;
+
+    margin-left: -2px;
+    margin-bottom: -2px;
+	
+	background-color: black;
+	
+	transform: rotate(-45deg);
+}
+.navigation-arrow::before{
+	content: "";
+	display: block;
+	
+	position: absolute;
+	
+	height: 2px;
+	width: 6px;
+	
+	top: 50%;
+    left: 50%;
+    margin-left: -2px;
+    margin-top: -3px;
+	
+	background-color: black;
+	
+	transform: rotate(45deg);
+}
+
+.navigation a{
+	text-decoration: none;	
+}
+
+.catalog-container{
+    display: flex;
+}
+
+/* Блок "Фильтр" (левая часть страницы) */
+.filter{
+    background-color: rgb(238, 238, 238);
+
+    flex-grow: 1;
+}
+
+.filter-container{
+    box-sizing: border-box;    
+
+    width: 330px;
+    margin-left: auto;
+    padding-left: 60px;
+}
+
+.filter-header{
+    display: flex;   
+    align-items: center;
+    
+    height: 70px;
+    
+    margin: 0 0 0 auto;
+    
+    padding: 0 0 0 60px;
+}
+
+.filter-black-line{
+    margin: 0;   
+    margin-top: 70px;
+    margin-bottom: 16px; 
+
+    padding: 0;
+
+    height: 2px;
+    width: 200px;
+    background-color: black;
+}
+
+.third-black-line{
+    margin-top: 40px;
+    margin-bottom: 16px;
+}
+
+.filter-div-with-input{
+	position: relative;
+	width: 200px;
+}
+
+.active-line{
+    display: block;
+    position: absolute;
+  
+    z-index: 1;
+    top: 12px;
+    left: 0;
+  
+    width: 200px;
+    height: 2px;
+  
+    background-color: rgb(145, 201, 47);
+}
+
+#price-field{
+	display: block;
+	position: absolute;
+	
+	font-family: 'Gilroy';
+	font-style: italic; 
+	font-size: 14px;
+	
+	background: transparent;
+	border: 0;
+	
+	top: 25px;
+	left: 0;
+	
+	height: 20px;
+	width: auto;
+}
+
+.filter-container input[type=range] {
+    -webkit-appearance: none;
+    width: 200px;
+    margin: 0 0;
+    margin-right: auto;
+}
+
+.filter-container input[type=range]:focus {
+    outline: none;
+}
+
+.filter-container input[type=range]::-webkit-slider-runnable-track {
+    width: 100%;
+    height: 2px;
+    cursor: pointer;    
+    background: black;
+    border-radius: 1.3px;
+    border: 0px;
+  }
+
+.filter-container input[type=range]::-webkit-slider-thumb {
+	-webkit-appearance: none;
+    box-shadow: 0px 0px 0px #000000, 0px 0px 0px #0d0d0d;
+    border: 7px solid white;
+    height: 20px;
+    width: 20px;	
+    border-radius: 50px;
+    background: rgb(171,171,171);
+    cursor: pointer;    
+    margin-top: -10px;	
+}
+
+.filter-container input[type=range]:focus::-webkit-slider-runnable-track {
+   /* background: #9fd343; */
+}
+
+.filter-container input[type=range]::-moz-range-track {
+    width: 100%;
+    height: 2px;
+    cursor: pointer;    
+    background: #91c92f;
+    border-radius: 1.3px;
+    border: 0px solid #010101;
+}
+
+input[type=range]::-moz-range-thumb {
+    box-shadow: 0px 0px 0px #000000, 0px 0px 0px #0d0d0d;
+    border: 0px solid #000000;
+    height: 22px;
+    width: 20px;
+    border-radius: 50px;
+    background: #ffffff;
+    cursor: pointer;
+}
+
+input[type=range]::-ms-track {
+    width: 100%;
+    height: 2px;
+    cursor: pointer;
+    background: transparent;
+    border-color: transparent;
+    color: transparent;
+}
+
+.filter-container input[type=range]::-ms-fill-lower {
+    background: #7fb029;
+    border: 0.2px solid #010101;
+    border-radius: 2.6px;
+    box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+}
+
+.filter-container input[type=range]::-ms-fill-upper {
+    background: #91c92f;
+    border: 0.2px solid #010101;
+    border-radius: 2.6px;
+    box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+}
+
+.filter-container input[type=range]::-ms-thumb {
+    box-shadow: 0px 0px 0px #000000, 0px 0px 0px #0d0d0d;
+    border: 0px solid #000000;
+    height: 22px;
+    width: 20px;
+    border-radius: 50px;
+    background: #ffffff;
+    cursor: pointer;
+    height: 2px;
+}
+
+.filter-container input[type=range]:focus::-ms-fill-lower {
+    background: #91c92f;
+}
+
+.filter-container input[type=range]:focus::-ms-fill-upper {
+    background: #9fd343;
+}
+  
+/* Кастомные чекбоксы в фильтре */
+.filter-container-checkbox{
+    display: flex;
+    align-items: center;
+    
+    margin-bottom: 17px;
+}
+
+.filter-container-checkbox label{
+    margin-right: 18px;
+}
+
+.filter-container-checkbox label input[type="checkbox"]{
+    display: none;
+}
+
+.filter-container-checkbox label input+div{
+    width: 23px;
+    height: 23px;
+
+    border: 2px solid black;   
+    border-radius: 2px;
+
+    background-color: transparent;
+}
+
+.filter-container-checkbox label div{
+    position: relative;
+}
+
+.filter-container-checkbox label input:checked + div:before{
+    content: '';
+    position: absolute; 
+    left: 3px;
+    top: 10px;
+
+    width: 13px;
+    height: 5px;
+
+    background: black;
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);    
+}
+.filter-container-checkbox label input:checked + div:after{
+    content: '';
+    position: absolute;
+    box-sizing: border-box;
+
+    left: 8px;
+    top: 6px;
+
+    width: 22px;
+    height: 5px;
+
+    box-shadow: 6px 0px 0px 2px rgb(238, 238, 238);
+
+    background: black;
+    -webkit-transform: rotate(-45deg);
+    transform: rotate(-45deg);       
+}
+/* Кастомные радиобаттоны в фильтре */
+.filter-container-radiobutton{
+    display: flex;
+    align-items: center;
+
+    margin-bottom: 17px;
+}
+
+.filter-container-radiobutton label{
+    margin-right: 18px;
+}
+
+.filter-container-radiobutton label input{
+    display: none;
+}
+
+.filter-container-radiobutton label input+div{
+    width: 24px;
+    height: 24px;
+
+    background: black;
+
+    border-radius: 50%;
+}
+
+.filter-container-radiobutton label div{
+    position: relative;    
+}
+
+.filter-container-radiobutton label div::before{
+    content: "";
+    position: absolute;
+
+    top: 50%;
+    left: 50%;
+
+    margin-top: -8px;
+    margin-left: -8px;
+
+    height: 16px;
+    width: 16px;
+    border-radius: 50%;
+
+    background-color: rgb(238, 238, 238);
+}
+
+.filter-container-radiobutton label input:checked + div::after{
+    content: "";
+    position: absolute;
+
+    top: 50%;
+    left: 50%;
+
+    margin-top: -4px;
+    margin-left: -4px;
+
+    height: 8px;
+    width: 8px;
+    border-radius: 50%;
+
+    background-color: black;
+}
+/* Кнопка "Показать" */
+.show-button{
+    position: relative;
+    z-index: 1;
+    font-family: 'Gilroy';
+    font-size: 18px;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+
+    border: 0px;
+
+    background-color: transparent;
+
+    padding: 0px;
+
+    width: 200px;
+    height: 40px;
+
+    text-align: center;
+
+    margin-top: 50px;
+}
+
+.show-button::after{
+    content: "";
+
+    position: absolute;
+
+    width: 200px;
+    height: 8px;
+
+    background-color: rgb(240, 197, 46);
+
+    left: 0;
+    top: 50%;
+
+    margin-top: -4px;
+
+    z-index: -1;
+}
+
+.show-button:hover{
+    background-color: rgb(240, 197, 46);
+}
+
+.show-button:focus{
+	outline: none;
+}
+
+/*
+    Блок "Сортировка" вместе с товарами для продажи
+    (правая часть страницы) 
+*/
+.sorting-and-items{
+    flex-grow: 1;
+    height: 100%;
+}
+
+.sorting{
+    background-color: rgb(235, 235, 235);
+
+    height: 70px;
+}
+
+.sorting-container{
+    display: flex;
+    box-sizing: border-box;
+
+    width: 830px;
+    height: 100%;
+
+    padding-left: 70px;
+}
+
+.sorting .sorting-container{
+    align-items: center;
+}
+
+.sorting-type{
+    display: flex;
+
+    justify-content: space-between;
+
+    list-style: none;
+
+    box-sizing: border-box;
+
+    width: 300px;
+
+    padding: 0;
+    padding-right: 10px;
+
+    margin-left: 45px;
+}
+    
+.sorting-type li{    
+    width: 60px;
+    height: 70px;
+} 
+.sorting-type li:nth-child(2){
+    width: 55px;
+}
+.sorting-type li:last-child{
+    width: 120px;
+}
+
+.sorting-type-button{
+    font-family: 'Open-Sans';
+    font-weight: lighter;
+    font-size: 14px;
+
+    background-color: transparent;
+
+    border: 0;
+    border-color: transparent;
+
+    padding: 0;
+
+    height: 100%;
+    width: 100%;
+
+    opacity: 0.3;
+}
+
+.sorting-type-button input{
+    display: none;
+}
+
+.sorting-type-button input+div{  
+    width: 100%;
+    height: 100%;
+
+    background-color: transparent;     
+
+    font-family: 'Open-Sans';
+    
+    font-size: 14px;   
+
+    color: black;
+
+    opacity: 0.3;
+}
+
+.sorting-type-button div{
+    position: relative;
+}
+
+.sorting-type-button div::after{
+    content: "По цене";
+
+    display: block;
+    position: absolute;
+
+    top: 50%;
+    left: 0;
+
+    margin-top: -9px;
+} 
+
+.sorting-type-button div.second-type:after{
+    content: "По типу";
+}
+.sorting-type-button div.third-type::after{
+    content: "По популярности";
+} 
+
+.sorting-type-button input:checked+div{
+    opacity: 1;
+}
+
+/* Стрелочки для направления сортировки*/
+
+.sorting-direction{
+    position: relative;
+
+    display: flex;
+    justify-content: flex-end;
+    
+    width: 60px;
+    height: 100%;
+
+    margin-left: auto;
+}
+
+.sorting-direction label{
+    display: flex;
+    align-items: center;    
+    
+    height: 100%;
+}
+
+.sorting-direction label:nth-child(2){
+    margin-left: 20px;
+}
+
+.sorting-direction input{
+    display: none;
+}
+
+.sorting-direction div{
+    position: relative;
+}
+
+.sorting-direction label input + div{
+    width: 10px;
+    height: 15px;
+
+    opacity: 0.3;
+}
+
+.sorting-direction-triangle-up::after{
+    content: "";
+    position: absolute;
+
+    left: 0;
+    top: 0;
+
+    width: 0; 
+    height: 0;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-bottom: 10px solid rgba(0, 0, 0, 1);
+}
+.sorting-direction-triangle-down::after{
+    content: "";
+    position: absolute;
+
+    left: 0;
+    top: 0;
+
+    width: 0; 
+    height: 0;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 10px solid rgba(0, 0, 0, 1);    
+}
+
+.sorting-direction label input:checked + div{
+    opacity: 1; 
+}
+
+.sorting-navigation{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-color: rgb(235, 235, 235);
+
+    width: 760px;
+    height: 70px;
+
+    margin-left: 70px;
+    margin-bottom: 77px;
+}
+
+.sorting-navigation-pages{
+    display: flex;
+
+    margin: 0 auto;
+}
+
+.custom-button input{
+    display: none;
+}
+ 
+.custom-button input+div{  
+    width: 20px;
+    height: 20px;
+
+    background-color: transparent;     
+
+    font-family: 'Gilroy';
+    
+    font-size: 16px;
+
+    line-height: 24px;
+
+    color: black;
+
+    opacity: 0.3;
+}
+
+.custom-button div{
+    position: relative;
+}
+
+.custom-button div::after{
+    content: "1";
+
+    display: block;
+    position: absolute;
+
+    top: 0;
+    left: 4px;
+} 
+.custom-button div.second-page:after{
+    content: "2";
+} 
+.custom-button div.third-page::after{
+    content: "3";
+} 
+
+.custom-button input:checked+div{
+    opacity: 1;
+}
+
+.sorting-navigation-button{
+    background-color: transparent;
+
+    border: 0px;
+    border-color: transparent;
+
+    padding: 0;
+}
+
+.items{
+    flex-wrap: wrap;
+
+    justify-content: space-between;
+}
+
+.item{
+	position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    margin: 0 0;
+    margin-top: 70px;
+
+    height: 420px;
+}
+
+.item-description{
+    font-family: 'Gilroy';
+    font-size: 18px;
+    font-weight: bolder;
+}
+
+.item-price{
+    font-family: 'Gilroy';
+    font-size: 18px;
+    font-style: italic;
+}
+
+.item div{
+    display: flex;
+    justify-content: space-between;
+}
+
+.add-item{
+	position: absolute;
+	
+	width: 360px;
+	height: 360px;
+	
+	opacity: 0;
+	
+	background-color: rgb(141,141,141);
+	
+	transition: opacity, 0.3s, easy, 0.3s;
+}
+.add-item:hover{
+	opacity: 1;
+    background-color: rgba(141,141,141,0.66);
+}
+
+.in-backet-button{
+	align-self: flex-end;
+	margin: 0;
+	margin-bottom: 30px;
+	margin-left: auto;
+    margin-right: auto;
+}
+
+.in-backet-button:focus{
+	outline: 0;
+}
+

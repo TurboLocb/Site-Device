@@ -1,0 +1,21 @@
+@keyframes blink{
+    
+    50%{
+        transform: translateX(2px) translateY(2px);
+    }
+    100%{
+        transform: translateX(0px) translateY(0px);
+    }
+
+}
+
+@keyframes reverseblink{
+    
+    50%{
+        transform: translateX(-2px) translateY(-2px);
+    }
+    100%{
+        transform: translateX(0px) translateY(0px);
+    }
+
+}

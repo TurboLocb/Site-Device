@@ -1,0 +1,76 @@
+.main-div{
+    display: flex;
+    flex-direction: column;
+    
+    position: relative;
+
+    width: 200px;
+}
+
+.main-div input[type = range]{
+    -webkit-appearance: none /* Отменяем стандартные стили для движка Webkit и Chromium */   
+ }
+  
+.main-div input[type = range]{  
+    position: relative;   
+  
+    background: transparent;
+    margin: 0;
+}
+  
+.main-div input[type = range]:focus{
+    outline: none;
+}
+  
+.main-div input[type = range]::-webkit-slider-runnable-track{ 
+    width: 100%;
+    height: 2px;
+  
+    background: black;
+    /* background: rgb(219, 219, 219); - тот цвет, который нужен для Site Device, но пока что для наглядности будет black*/
+}
+  
+.main-div input[type = range]::-webkit-slider-thumb{
+    -webkit-appearance: none;
+  
+    background-color: rgb(171, 171, 171);
+    border: 7px solid black;
+  
+    /* Рабочий вариант разделения полосы по цветам, но можно использовать если размеры линии и ползунка совпадают */
+    /* box-shadow: -100vw 0vw 0 100vw dodgerblue; */  /* vw - viewpoint width */
+  
+    width: 20px;
+    height: 20px;  
+   
+    border-radius: 50%;  
+  
+    cursor: pointer;
+    margin-top: -10px;    
+}
+  
+#valueBlock{
+    width: 51px;
+    height: 15px;  
+    
+    background: transparent;
+  
+    border: none;
+  
+    margin: 0;
+  
+    font-size: 14px;
+}
+  
+.active-line{
+    display: block;
+    position: absolute;
+  
+    z-index: 1;
+    top: 15px;
+    left: 0;
+  
+    width: 200px;
+    height: 2px;
+  
+    background-color: rgb(145, 201, 47);
+}
