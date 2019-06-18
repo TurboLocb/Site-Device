@@ -1812,18 +1812,18 @@ footer a:focus{
 	width: 200px;
 }
 
-.active-line{
-    display: block;
+.filter-div-prices{
+    position: relative;
+
+    margin: 0;
+    margin-top: 20px;    
+    border: 0;
+}
+
+.filter-div-prices input[type="text"]{
     position: absolute;
-  
-    z-index: 1;
-    top: 12px;
-    left: 0;
-  
-    width: 200px;
-    height: 2px;
-  
-    background-color: rgb(145, 201, 47);
+
+    top: 0;    
 }
 
 #price-field{
@@ -1841,106 +1841,50 @@ footer a:focus{
 	left: 0;
 	
 	height: 20px;
-	width: auto;
+    width: auto;
+    
+    cursor: pointer;
 }
 
-.filter-container input[type=range] {
-    -webkit-appearance: none;
-    width: 200px;
-    margin: 0 0;
-    margin-right: auto;
+#price-field:focus{
+    outline: 0;
 }
 
-.filter-container input[type=range]:focus {
-    outline: none;
-}
+/* Селекторы слайдера */
+#slider-range{
+    background-color: rgb(171,171,171);
 
-.filter-container input[type=range]::-webkit-slider-runnable-track {
-    width: 100%;
     height: 2px;
-    cursor: pointer;    
-    background: black;
-    border-radius: 1.3px;
-    border: 0px;
-  }
+}
 
-.filter-container input[type=range]::-webkit-slider-thumb {
-	-webkit-appearance: none;
-    box-shadow: 0px 0px 0px #000000, 0px 0px 0px #0d0d0d;
+#slider-range div{
+    background-color: rgb(145, 201, 47);
+}
+
+#slider-range span{
+    box-sizing: border-box;
     border: 7px solid white;
+
     height: 20px;
     width: 20px;	
-    border-radius: 50px;
+
+    border-radius: 50%;
     background: rgb(171,171,171);
-    cursor: pointer;    
-    margin-top: -10px;	
-}
-
-.filter-container input[type=range]:focus::-webkit-slider-runnable-track {
-   /* background: #9fd343; */
-}
-
-.filter-container input[type=range]::-moz-range-track {
-    width: 100%;
-    height: 2px;
-    cursor: pointer;    
-    background: #91c92f;
-    border-radius: 1.3px;
-    border: 0px solid #010101;
-}
-
-input[type=range]::-moz-range-thumb {
-    box-shadow: 0px 0px 0px #000000, 0px 0px 0px #0d0d0d;
-    border: 0px solid #000000;
-    height: 22px;
-    width: 20px;
-    border-radius: 50px;
-    background: #ffffff;
     cursor: pointer;
+
+    margin-top: -5px;
 }
 
-input[type=range]::-ms-track {
-    width: 100%;
-    height: 2px;
-    cursor: pointer;
-    background: transparent;
-    border-color: transparent;
-    color: transparent;
+#slider-range span:focus{
+    outline: 0;
 }
 
-.filter-container input[type=range]::-ms-fill-lower {
-    background: #7fb029;
-    border: 0.2px solid #010101;
-    border-radius: 2.6px;
-    box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+.price-value-left,
+.price-value-right{
+    background-color: transparent;
+    border: 0;
 }
 
-.filter-container input[type=range]::-ms-fill-upper {
-    background: #91c92f;
-    border: 0.2px solid #010101;
-    border-radius: 2.6px;
-    box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
-}
-
-.filter-container input[type=range]::-ms-thumb {
-    box-shadow: 0px 0px 0px #000000, 0px 0px 0px #0d0d0d;
-    border: 0px solid #000000;
-    height: 22px;
-    width: 20px;
-    border-radius: 50px;
-    background: #ffffff;
-    cursor: pointer;
-    height: 2px;
-}
-
-.filter-container input[type=range]:focus::-ms-fill-lower {
-    background: #91c92f;
-}
-
-.filter-container input[type=range]:focus::-ms-fill-upper {
-    background: #9fd343;
-}
-  
 /* Кастомные чекбоксы в фильтре */
 .filter-container-checkbox{
     display: flex;
@@ -2233,7 +2177,7 @@ input[type=range]::-ms-track {
     opacity: 1;
 }
 
-/* Стрелочки для направления сортировки*/
+/* Стрелочки для направления сортировки */
 
 .sorting-direction{
     position: relative;

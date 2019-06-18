@@ -1,25 +1,9 @@
 function valueSlider(){
-	var input = document.getElementById("slider-price");
-	var priceField = document.getElementById("price-field");
-	var inputLine = document.querySelector(".active-line");
+	var slider = document.getElementById("slider-range");
+	var sliderValueMargin = slider.getElementsByTagName("span");
 	
-	try{
-		/*
-		console.log(input.value);
-		console.log(priceField);
-		console.log(inputLine);
-		*/
+	console.log(sliderValueMargin[0]);
+	console.log(sliderValueMargin[1]);
 		
-		priceField.value = "до "+input.value;
-		space = input.value / 100;
-		
-		/* Двигаем priceField совместно с ползунком */
-		priceField.style.marginLeft = space + "%";
-		/* Изменяем длину active-line */
-		inputLine.style.width = space + "%"; /*"calc(\" + space + \"%\" + \"-7px)";*/
-		
-	}catch(e){
-		console.log(e.message);
-	}	
 }
 valueSlider();

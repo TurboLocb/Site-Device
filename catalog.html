@@ -3,8 +3,33 @@
     <head>
         <meta charset="UTC-8">
         <link href="style.css" rel="stylesheet"><link>
-    </head>
+        <link rel="stylesheet" href="http://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">        
+        <script src="http://code.jquery.com/jquery-1.12.4.js"></script>
+        <script src="http://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <!-- Скрипт для слайдера -->
+        <script>            
+        $( function() {
+            $( "#slider-range" ).slider({
+            range: true,
+            min: 0,
+            max: 500,
+            values: [ 75, 300 ],
+            slide: function( event, ui ) {
+                // $( "#amount" ).val( "$" + ui.values[ 0 ] + " - $" + ui.values[ 1 ] );
 
+                $( "#amount-left" ).val( "от " + ui.values[ 0 ]);
+                $( "#amount-right" ).val( "до " + ui.values[ 1 ] );                
+            }
+            });
+            // $( "#amount" ).val( "$" + $( "#slider-range" ).slider( "values", 0 ) +
+            // " - $" + $( "#slider-range" ).slider( "values", 1 ) );
+
+            $("#amount-left").val("от " + $("#slider-range").slider("values", 0));
+            $("#amount-right").val("до " + $("#slider-range").slider("values", 1));
+        });
+        </script>
+        
+    </head>
 <body>
 <div class="container">
 <header class="catalog">
@@ -125,21 +150,19 @@
             <h5 class="catalog-Gilroy-extra-bold-no-uppercase">Стоимость</h5>
             <!-- Слайдер с ценами на товар -->
             <div class="filter-div-with-input">
-				<span class="active-line"></span>
-				<input id="slider-price" type="range" min="0" max="9000" 
-				step="1000" value="1700" oninput="valueSlider()">
-				</input>
-				<input id="price-field" value=""></input>
-				<datalist id="slider-value">
-					<option value="0">
-					<option value="20">
-					<option value="50">
-				</datalist>
+                <!-- Слайдер -->
+                <div id="slider-range"></div>
+
+                <!-- Блок с ценами под слайдером --> 
+                <p class="filter-div-prices">                   
+                    <input type="text" id="amount-left" readonly class="price-value-left">
+                    <input type="text" id="amount-right" readonly class="price-value-right">
+                </p>
 			</div>
             <figure class="filter-black-line"></figure>
             <div>
                 <h5 class="catalog-Gilroy-extra-bold-no-uppercase">Цвет</h5>
-                <div class="filter-container-checkbox catalog-Open-Sans-light"><label><input type="checkbox"><div></div></label><span>Черный</span></div>
+                <div class="filter-container-checkbox catalog-Open-Sans-light"><label><input type="checkbox" checked><div></div></label><span>Черный</span></div>
                 <div class="filter-container-checkbox catalog-Open-Sans-light"><label><input type="checkbox"><div></div></label><span>Белый</span></div>
                 <div class="filter-container-checkbox catalog-Open-Sans-light"><label><input type="checkbox"><div></div></label><span>Синий</span></div>
                 <div class="filter-container-checkbox catalog-Open-Sans-light"><label><input type="checkbox"><div></div></label><span>Красный</span></div>
@@ -320,7 +343,11 @@
 
 <script src="./js/catalog/catalog.js"></script>
 <script src="./js/catalog/valueSlider.js"></script>
-
+<script>
+    var sl = $("#slider-range").children();
+    var left = sl[1].position();
+    console.log("Отступ слева: "+ left.left);      
+</script>
 
 </body>
 </html>
