@@ -151,7 +151,7 @@
             <!-- Слайдер с ценами на товар -->
             <div class="filter-div-with-input">
                 <!-- Слайдер -->
-                <div id="slider-range"></div>
+                <div id="slider-range" class=".slider-range"></div>
 
                 <!-- Блок с ценами под слайдером --> 
                 <p class="filter-div-prices">                   
@@ -344,9 +344,9 @@
 <script src="./js/catalog/catalog.js"></script>
 <script src="./js/catalog/valueSlider.js"></script>
 <script>
-    var sl = $("#slider-range").children();
-    var left = sl[1].position();
-    console.log("Отступ слева: "+ left.left);      
+    var sl = $("#slider-range").children("div").position().left;
+    // var left = sl[0].position().left;
+    console.log("Отступ слева: "+ sl);      
 </script>
 
 </body>
