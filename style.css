@@ -1822,7 +1822,7 @@ footer a:focus{
 
 .filter-div-prices input[type="text"]{
     position: absolute;
-
+    width: auto;
     top: 0;    
 }
 
@@ -1852,6 +1852,7 @@ footer a:focus{
 
 /* Селекторы слайдера */
 #slider-range{
+    position: relative;
     background-color: rgb(171,171,171);
 
     height: 2px;

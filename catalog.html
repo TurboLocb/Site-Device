@@ -17,15 +17,33 @@
             slide: function( event, ui ) {
                 // $( "#amount" ).val( "$" + ui.values[ 0 ] + " - $" + ui.values[ 1 ] );
 
-                $( "#amount-left" ).val( "от " + ui.values[ 0 ]);
-                $( "#amount-right" ).val( "до " + ui.values[ 1 ] );                
+                $("#amount-left").val( "от " + ui.values[ 0 ]);
+                $("#amount-right").val( "до " + ui.values[ 1 ] );
+                
+                var left = $(this).find('.ui-slider-handle:first').attr("style");
+                var right = $(this).find('.ui-slider-handle + .ui-slider-handle').attr("style");
+                console.log("Левый ползунок " + left);
+                console.log("Правый ползунок " + right);
+                
+                a = left;
+                b = right;
+                                
+                $("#amount-left").css("left", a);
+                $("#amount-right").css("left", right);
             }
+            
             });
             // $( "#amount" ).val( "$" + $( "#slider-range" ).slider( "values", 0 ) +
             // " - $" + $( "#slider-range" ).slider( "values", 1 ) );
 
             $("#amount-left").val("от " + $("#slider-range").slider("values", 0));
             $("#amount-right").val("до " + $("#slider-range").slider("values", 1));
+
+            var leftSt = $(this).find('.ui-slider-handle:first').attr("style");
+            var rightSt = $(this).find('.ui-slider-handle + .ui-slider-handle').attr("style");
+
+            $("#amount-left").css("left",  leftSt);
+            $("#amount-right").css("left", rightSt);
         });
         </script>
         
@@ -343,11 +361,6 @@
 
 <script src="./js/catalog/catalog.js"></script>
 <script src="./js/catalog/valueSlider.js"></script>
-<script>
-    var sl = $("#slider-range").children("div").position().left;
-    // var left = sl[0].position().left;
-    console.log("Отступ слева: "+ sl);      
-</script>
 
 </body>
 </html>
