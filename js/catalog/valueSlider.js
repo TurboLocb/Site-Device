@@ -1,4 +1,0 @@
-function valueSlider(){	
-		
-}
-valueSlider();

@@ -1820,37 +1820,14 @@ footer a:focus{
     border: 0;
 }
 
+/* Селекторы слайдера */
+
 .filter-div-prices input[type="text"]{
     position: absolute;
     width: auto;
     top: 0;    
 }
 
-#price-field{
-	display: block;
-	position: absolute;
-	
-	font-family: 'Gilroy';
-	font-style: italic; 
-	font-size: 14px;
-	
-	background: transparent;
-	border: 0;
-	
-	top: 25px;
-	left: 0;
-	
-	height: 20px;
-    width: auto;
-    
-    cursor: pointer;
-}
-
-#price-field:focus{
-    outline: 0;
-}
-
-/* Селекторы слайдера */
 #slider-range{
     position: relative;
     background-color: rgb(171,171,171);
@@ -1880,8 +1857,15 @@ footer a:focus{
     outline: 0;
 }
 
+.price-value-left{
+    margin-left: -30px;
+}
+
 .price-value-left,
 .price-value-right{
+    font-family: 'Gilroy';
+    font-style: italic;
+
     background-color: transparent;
     border: 0;
 }
