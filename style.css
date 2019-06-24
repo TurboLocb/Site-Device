@@ -2371,3 +2371,100 @@ footer a:focus{
 	outline: 0;
 }
 
+/* 
+
+    Блок авторизации
+
+*/
+.login-form{
+    width: 480px;
+    height: 290px;
+
+    margin-top: -145px;
+    margin-left: -240px;
+
+    padding: 50px 100px;
+}
+
+/* Поле логина */
+.login-form-first-row{
+    flex-direction: column;
+    margin-top: -20px;
+}
+
+.login-form-first-row input{
+    width: 280px;
+}
+
+/* Поле пароля */
+.login-form-second-row{
+    margin-top: 10px;
+}
+
+.login-form-second-row input[type="text"]{
+    display: inline-block;
+    box-sizing: border-box;
+
+    height: 50px;
+    width: 280px;
+
+    background-color: rgb(242, 242, 242);
+
+    padding-top: 18px;
+    padding-bottom: 21px;
+    padding-left: 19px;
+    padding-right: 19px;
+
+    margin-top: 11px;
+
+    border: 0;
+}
+
+.login-form-third-row{
+    display: flex;
+    justify-content: space-between;
+}
+
+/* Кнопки логин-формы */
+.login-form-submit-button,
+.login-form-reg-button{
+    font-size: 15px;    
+
+    width: 110px;
+
+    margin-top: 18px;
+}
+
+.login-form-reg-button{
+    width: 150px;
+}
+
+.login-form-reg-button:hover{    
+    background-color: rgb(46, 240, 227);
+}
+
+.login-form-submit-button::after{
+    width: 110px;
+}
+
+.login-form-reg-button::after{
+    width: 150px;
+    background-color: rgb(46, 240, 227);
+}
+
+.login-form-close-button{
+    top: 15px;
+    right: 15px;
+    height: 28px;
+    width: 28px;
+}
+
+.login-form-close-button::after,
+.login-form-close-button::before{
+    height: 20px;
+    width: 4px;
+    top: 50%;
+    right: 50%;
+    margin-top: -10px;
+    margin-right: -2px;
+}

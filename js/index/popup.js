@@ -1,8 +1,41 @@
 /* 
+
+    Функция для открывания формы авторизации
+
+*/
+
+function popupLoginForm(){
+
+    var popupLoginForm = document.querySelector(".login-form");
+    var popupLoginButtonOpen = document.getElementById("login-enter");
+    var popupLoginButtonClose = document.querySelector(".login-form-close-button");
+
+    popupLoginButtonOpen.addEventListener("click", function(event){
+
+        event.preventDefault();
+
+        if(popupLoginForm.classList.contains("popup-hide")){
+            popupLoginForm.classList.remove("popup-hide");
+        }
+
+    });
+
+    popupLoginButtonClose.addEventListener("click", function(event){
+
+        event.preventDefault();
+
+        if(!popupLoginForm.classList.contains("popup-hide")){
+            popupLoginForm.classList.add("popup-hide");
+        }
+
+    });
+}
+
+/* 
     
     Функция для открывания формы "Напиши нам"
 
- */ 
+ */
 
 function popup(){
 
