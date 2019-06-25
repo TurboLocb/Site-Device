@@ -380,6 +380,7 @@
     <div class="footer-third-div">
         <ul class="third-div-ul">
             <li>
+            <a id="login-enter-footer">
             <span>
                 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="13" height="12" enable-background="new 0 0 13 12" xml:space="preserve"><rect id="backgroundrect" width="100%" height="100%" x="0" y="0" fill="none" stroke="none"/>
 
@@ -387,6 +388,7 @@
                 </svg>
             </span>
                 Войти
+            </a>
             </li>
             <li>
             <span>
@@ -443,14 +445,15 @@
 </form>
 
 <!-- Форма авторизации -->
-<form class="login-form write-us-popup popup-hide" type="submit" action="login">
+<div class="background-for-login  popup-hide">
+<form class="login-form write-us-popup" type="submit" action="login">
     <div class="login-form-first-row write-us-popup-first-row">
         <label for="login">Логин</label>
         <input class="loginField" type="text" name="login" placeholder="Login">
     </div>
     <div class="login-form-second-row write-us-popup-second-row">
         <label for="password">Пароль</label>
-        <input class="passwordField" type="text" name="password" placeholder="Password">
+        <input class="passwordField" type="password" name="password" placeholder="Password">
     </div>
     <div class="login-form-third-row">
         <button class="login-form-submit-button write-us-popup-submit-button" type="submit"><span>Войти</span></button>
@@ -458,6 +461,7 @@
         <button class="login-form-close-button write-us-popup-close-button"></button>
     </div>
 </form>
+</div>
 
 <script src="./js/index/slide.js"></script>
 <script src="./js/index/popup.js"></script>

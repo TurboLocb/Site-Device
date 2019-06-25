@@ -1,16 +1,27 @@
 /* 
 
-    Функция для открывания формы авторизации
+    Функция для открытия формы авторизации
 
 */
 
 function popupLoginForm(){
 
-    var popupLoginForm = document.querySelector(".login-form");
+    var popupLoginForm = document.querySelector(".background-for-login");
     var popupLoginButtonOpen = document.getElementById("login-enter");
+    var popupLoginButtonOpenFooter = document.getElementById("login-enter-footer");    
     var popupLoginButtonClose = document.querySelector(".login-form-close-button");
 
     popupLoginButtonOpen.addEventListener("click", function(event){
+
+        event.preventDefault();
+
+        if(popupLoginForm.classList.contains("popup-hide")){
+            popupLoginForm.classList.remove("popup-hide");
+        }
+
+    });
+
+    popupLoginButtonOpenFooter.addEventListener("click", function(event){
 
         event.preventDefault();
 
@@ -110,8 +121,8 @@ function focusChangeBackgroundLine(){
     var warrantyBackgroundLine = document.getElementById("warranty-line");
     var creditBackgroundLine = document.getElementById("credit-line");
 
-    console.log(deliveryButton);
-    console.log(deliveryBackgroundLine);
+    // console.log(deliveryButton);
+    // console.log(deliveryBackgroundLine);
 
     /* Обрабатываем нажатие на "Доставка" */
     deliveryButton.addEventListener("focus", function(event){
@@ -154,3 +165,4 @@ function focusChangeBackgroundLine(){
 popup();
 popupSearchButton();
 focusChangeBackgroundLine();
+popupLoginForm();

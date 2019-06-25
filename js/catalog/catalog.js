@@ -49,5 +49,45 @@ function popupSearchButton(){
     });
 }
 
+/* Функция открывающая форму авторизации */
+function popupLoginForm(){
+
+    var popupLoginForm = document.querySelector(".background-for-login");
+    var popupLoginButtonOpen = document.getElementById("login-enter");
+    var popupLoginButtonOpenFooter = document.getElementById("login-enter-footer");    
+    var popupLoginButtonClose = document.querySelector(".login-form-close-button");
+
+    popupLoginButtonOpen.addEventListener("click", function(event){
+
+        event.preventDefault();
+
+        if(popupLoginForm.classList.contains("popup-hide")){
+            popupLoginForm.classList.remove("popup-hide");
+        }
+
+    });
+
+    popupLoginButtonOpenFooter.addEventListener("click", function(event){
+
+        event.preventDefault();
+
+        if(popupLoginForm.classList.contains("popup-hide")){
+            popupLoginForm.classList.remove("popup-hide");
+        }
+
+    });
+
+    popupLoginButtonClose.addEventListener("click", function(event){
+
+        event.preventDefault();
+
+        if(!popupLoginForm.classList.contains("popup-hide")){
+            popupLoginForm.classList.add("popup-hide");
+        }
+
+    });
+}
+
 catalog();
 popupSearchButton();
+popupLoginForm();
