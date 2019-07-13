@@ -123,8 +123,14 @@
         <div class="filter-container">
             <figure class="filter-black-line"></figure>
             <h5 class="catalog-Gilroy-extra-bold-no-uppercase">Стоимость</h5>
-            <!-- Слайдер с ценами на товар -->
-            <input type="range" min="0" max="10000" step="1000" value="3000"></input:type>
+            <div class="input-div">
+                <!-- Слайдер с ценами на товар -->
+                <input id="inputRange" type="range" min="0" max="10000" step="1000" value="3000" oninput="inputRange()"></input>
+                <!-- Зеленая линия в input'e -->
+                <span class="input-range-line"></span>
+                <!-- Поля для вывода значений input'a -->
+                <input class="input-range-value" id="rangeValue">
+            </div>
             <figure class="filter-black-line"></figure>
             <div>
                 <h5 class="catalog-Gilroy-extra-bold-no-uppercase">Цвет</h5>
@@ -304,7 +310,8 @@
     </div>
 </footer>
 
-<script src="catalog.js"></script>
+<script src="./js/catalog.js"></script>
+<script src="./js/inputRange.js"></script>
 
 </body>
 </html>

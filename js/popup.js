@@ -77,8 +77,8 @@ function focusChangeBackgroundLine(){
     var warrantyBackgroundLine = document.getElementById("warranty-line");
     var creditBackgroundLine = document.getElementById("credit-line");
 
-    console.log(deliveryButton);
-    console.log(deliveryBackgroundLine);
+    /* console.log(deliveryButton);
+    console.log(deliveryBackgroundLine); */
 
     /* Обрабатываем нажатие на "Доставка" */
     deliveryButton.addEventListener("focus", function(event){
