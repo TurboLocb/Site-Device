@@ -2,9 +2,13 @@
 <html>
     <head>
         <meta charset="UTC-8">
-        <link href="style.css" rel="stylesheet"><link>
-    </head>
-
+        <link href="style.css" rel="stylesheet"><link> 
+        <link rel="stylesheet" href="http://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">        
+        <script src="http://code.jquery.com/jquery-1.12.4.js"></script>
+        <script src="http://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+        <!-- Скрипт для слайдера -->
+        <script src="./js/catalog/slider.js"></script>        
+</head>
 <body>
 <div class="container">
 <header class="catalog">
@@ -55,7 +59,7 @@
     </div>
     <div class="header-second-div">
     <div class="functional">
-        <a>
+        <a id="login-enter">
         <span style="margin-right:15px">
             <span class="header-hidden-span">
                 Спан с иконкой
@@ -123,18 +127,21 @@
         <div class="filter-container">
             <figure class="filter-black-line"></figure>
             <h5 class="catalog-Gilroy-extra-bold-no-uppercase">Стоимость</h5>
-            <div class="input-div">
-                <!-- Слайдер с ценами на товар -->
-                <input id="inputRange" type="range" min="0" max="10000" step="1000" value="3000" oninput="inputRange()"></input>
-                <!-- Зеленая линия в input'e -->
-                <span class="input-range-line"></span>
-                <!-- Поля для вывода значений input'a -->
-                <input class="input-range-value" id="rangeValue">
-            </div>
+            <!-- Слайдер с ценами на товар -->
+            <div class="filter-div-with-input">
+                <!-- Слайдер -->
+                <div id="slider-range" class=".slider-range"></div>
+
+                <!-- Блок с ценами под слайдером --> 
+                <p class="filter-div-prices">                   
+                    <input type="text" id="amount-left" readonly class="price-value-left">
+                    <input type="text" id="amount-right" readonly class="price-value-right">
+                </p>
+			</div>
             <figure class="filter-black-line"></figure>
             <div>
                 <h5 class="catalog-Gilroy-extra-bold-no-uppercase">Цвет</h5>
-                <div class="filter-container-checkbox catalog-Open-Sans-light"><label><input type="checkbox"><div></div></label><span>Черный</span></div>
+                <div class="filter-container-checkbox catalog-Open-Sans-light"><label><input type="checkbox" checked><div></div></label><span>Черный</span></div>
                 <div class="filter-container-checkbox catalog-Open-Sans-light"><label><input type="checkbox"><div></div></label><span>Белый</span></div>
                 <div class="filter-container-checkbox catalog-Open-Sans-light"><label><input type="checkbox"><div></div></label><span>Синий</span></div>
                 <div class="filter-container-checkbox catalog-Open-Sans-light"><label><input type="checkbox"><div></div></label><span>Красный</span></div>
@@ -181,6 +188,9 @@
         </div>
         <div class="items sorting-container">
             <div class="item">
+                    <div class="add-item">
+                            <button class="in-backet-button show-button">В корзину</button>
+                        </div>
                 <img height="360px" width="360px" src="images/catalog-items/item-1.jpg">
                 <div>
                     <p class="item-description">Любительская селфи палка</p>
@@ -267,6 +277,7 @@
     <div class="footer-third-div">
         <ul class="third-div-ul">
             <li>
+                <a id="login-enter-footer">
             <span>
                 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="13" height="12" enable-background="new 0 0 13 12" xml:space="preserve"><rect id="backgroundrect" width="100%" height="100%" x="0" y="0" fill="none" stroke="none"/>
 
@@ -274,6 +285,7 @@
                 </svg>
             </span>
                 Войти
+            </a>
             </li>
             <li>
             <span>
@@ -312,6 +324,24 @@
 
 <script src="./js/catalog.js"></script>
 <script src="./js/inputRange.js"></script>
-
+<!-- Форма авторизации -->
+<div class="background-for-login  popup-hide">
+        <form class="login-form write-us-popup" type="submit" action="login">
+            <div class="login-form-first-row write-us-popup-first-row">
+                <label for="login">Логин</label>
+                <input class="loginField" type="text" name="login" placeholder="Login">
+            </div>
+            <div class="login-form-second-row write-us-popup-second-row">
+                <label for="password">Пароль</label>
+                <input class="passwordField" type="password" name="password" placeholder="Password">
+            </div>
+            <div class="login-form-third-row">
+                <button class="login-form-submit-button write-us-popup-submit-button" type="submit"><span>Войти</span></button>
+                <button class="login-form-reg-button write-us-popup-submit-button" type=""><span>Регистрация</span></button>
+                <button class="login-form-close-button write-us-popup-close-button"></button>
+            </div>
+        </form>
+        </div>
+<script src="./js/catalog/catalog.js"></script>
 </body>
 </html>
