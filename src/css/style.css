@@ -1,11 +1,11 @@
-@import url("animation.css");
+@import url("./animation.css");
 
 @font-face{
     font-family: 'Gilroy';
 
-    src: url("fonts/gilroylight.woff") format("woff");
+    src: url("../fonts/gilroylight.woff") format("woff");
 
-    src: url("fonts/gilroylight.woff2") format("woff2");
+    src: url("../fonts/gilroylight.woff2") format("woff2");
 
     font-weight: lighter;
 
@@ -16,9 +16,9 @@
 @font-face{
     font-family: 'Gilroy';
 
-    src: url("fonts/gilroyextrabold.woff") format("woff");
+    src: url("../fonts/gilroyextrabold.woff") format("woff");
 
-    src: url("fonts/gilroyextrabold.woff2") format("woff2");
+    src: url("../fonts/gilroyextrabold.woff2") format("woff2");
 
     font-weight: bolder;
 
@@ -29,9 +29,9 @@
 @font-face{
     font-family: 'Open-Sans';
 
-    src: url("fonts/opensans.woff") format("woff");
+    src: url("../fonts/opensans.woff") format("woff");
 
-    src: url("fonts/opensans.woff2") format("woff2");
+    src: url("../fonts/opensans.woff2") format("woff2");
 
     font-weight: normal;
 
@@ -42,9 +42,9 @@
 @font-face{
     font-family: 'Open-Sans';
 
-    src: url("fonts/opensanslight.woff") format("woff");
+    src: url("../fonts/opensanslight.woff") format("woff");
 
-    src: url("fonts/opensanslight.woff2") format("woff2");
+    src: url("../fonts/opensanslight.woff2") format("woff2");
 
     font-weight: lighter;
 
@@ -489,7 +489,7 @@ article p{
     height: 490px; 
     width: 400px;
 
-    background-image: url("images/sliders/slider-1.png");
+    background-image: url("../images/sliders/slider-1.png");
     background-repeat: no-repeat;
     background-position: center;
 
@@ -537,7 +537,7 @@ article p{
 
 /* Второй слайд с фитнес-браслетом */
 .products-description-two-left-side{
-    background-image: url("images/sliders/slider-2.png");
+    background-image: url("../images/sliders/slider-2.png");
 }
 
 .description-02{
@@ -549,7 +549,7 @@ article p{
 
 /* Третий слайд с квадрокоптером */
 .products-description-three-left-side{
-    background-image: url("images/sliders/slider-3.png");
+    background-image: url("../images/sliders/slider-3.png");
 
     width: 530px;
 
@@ -602,11 +602,11 @@ article p{
 }
 
 .pop-1{
-    background: url("images/productions/popular-1.svg");
+    background: url("../images/productions/popular-1.svg");
 }
 
 .pop-2{
-    background: url("images/productions/popular-2.svg");    
+    background: url("../images/productions/popular-2.svg");    
 }
 
 .productions ul li .pop-2{
@@ -614,19 +614,19 @@ article p{
 }
 
 .pop-3{
-    background: url("images/productions/popular-3.svg");
+    background: url("../images/productions/popular-3.svg");
 }
 
 .pop-4{
-    background: url("images/productions/popular-4.svg");
+    background: url("../images/productions/popular-4.svg");
 }
 
 .pop-5{
-    background: url("images/productions/popular-5.svg");
+    background: url("../images/productions/popular-5.svg");
 }
 
 .pop-6{
-    background: url("images/productions/popular-6.svg");
+    background: url("../images/productions/popular-6.svg");
 }
 
 .productions ul{
@@ -678,6 +678,7 @@ article p{
 
     background-color: rgb(229, 229, 229);
     max-height: 290px;
+    min-width: 1160px;
 }
 
 .delivery .container{
@@ -931,16 +932,16 @@ article p{
 }
 
 .dji{
-    background-image: url("images/logos/logo-1.jpg");
+    background-image: url("../images/logos/logo-1.jpg");
 }
 .spgates{
-    background-image: url("images/logos/logo-2.jpg");
+    background-image: url("../images/logos/logo-2.jpg");
 }
 .gopro{
-    background-image: url("images/logos/logo-3.jpg");
+    background-image: url("../images/logos/logo-3.jpg");
 }
 .vive{
-    background-image: url("images/logos/logo-4.jpg");
+    background-image: url("../images/logos/logo-4.jpg");
 }
 
 

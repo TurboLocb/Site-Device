@@ -2,7 +2,7 @@
 <html>
     <head>
         <meta charset="UTC-8">
-        <link href="style.css" rel="stylesheet"><link>
+        <link href="./css/style.css" rel="stylesheet"><link>
     </head>
 <body>
 <div class="container" style="margin-bottom: 185px">
@@ -102,7 +102,7 @@
         <span class="functional-2-white-line"></span>         
         <a class="functional-2-first-a" style="margin-right:33px">Доставка</a>
         <a style="margin-right:78px">Гарантия</a>
-        <a style="position:relative; right:-4px;">Контакты</a>             
+        <a id ="contacts-button" style="position:relative; right:-4px;">Контакты</a>             
 </header>
 
 <article class="products">
@@ -284,7 +284,7 @@
             Ведь мы неплохо <br> заработаем, поднимая его на ваш этаж.
         </p>
     </div>
-    <img class="delivery-img" src="images/delivery-block/delivery.svg">
+    <img class="delivery-img" src="./images/delivery-block/delivery.svg">
     </div>    
 </section>
 
@@ -292,10 +292,10 @@
 <div class="container">
 <section class="logos">
     <ul>
-        <li><div class="no-color-logo dji"><img src="images/logos/logo-1-color.jpg"></div></li>
-        <li><div class="no-color-logo spgates"><img src="images/logos/logo-2-color.jpg"></div></li>
-        <li><div class="no-color-logo gopro"><img src="images/logos/logo-3-color.jpg"></div></li>
-        <li><div class="no-color-logo vive"><img src="images/logos/logo-4-color.jpg"></div></li>
+        <li><div class="no-color-logo dji"><img src="./images/logos/logo-1-color.jpg"></div></li>
+        <li><div class="no-color-logo spgates"><img src="./images/logos/logo-2-color.jpg"></div></li>
+        <li><div class="no-color-logo gopro"><img src="./images/logos/logo-3-color.jpg"></div></li>
+        <li><div class="no-color-logo vive"><img src="./images/logos/logo-4-color.jpg"></div></li>
     </ul>
 </section>
 
@@ -360,19 +360,19 @@
             <li class="social-button-li">
                 <a class="social-button" href="#" class="facebook-logo">
                     <span>facebook</span>
-                    <img src="images/social-button-svg/facebook.svg" alt="facebook" height="19px" width="15px"> 
+                    <img src="./images/social-button-svg/facebook.svg" alt="facebook" height="19px" width="15px"> 
                 </a>
             </li>
             <li class="social-button-li">
                 <a class="social-button" href="#" class="instagram-logo">
                     <span>instagram</span>
-                    <img src="images/social-button-svg/instagram.svg" alt="instagram" height="16px" width="16px"> 
+                    <img src="./images/social-button-svg/instagram.svg" alt="instagram" height="16px" width="16px"> 
                 </a>
             </li>
             <li class="social-button-li">
                 <a class="social-button" href="#" class="twitter-logo">
                     <span>twitter</span>
-                    <img src="images/social-button-svg/twitter.svg" alt="twitter" height="18px" width="19px"> 
+                    <img src="./images/social-button-svg/twitter.svg" alt="twitter" height="18px" width="19px"> 
                 </a>
             </li>
         </ul>
@@ -466,9 +466,16 @@
 <script src="./js/index/slide.js"></script>
 <script src="./js/index/popup.js"></script>
 
-<!-- Загрузим React. -->
-<script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
-<script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
+
+
+<script>
+    const url = "http://localhost:8080/products";
+    console.log("Отправляем запрос на " + url);
+    fetch(url, {mods: "no-cors"})
+    .then((response) => response.json())
+    .then((json) => console.log(json))
+    .catch((exception) => console.log(exception));
+</script>
 
 </body>
 </html>

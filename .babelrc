@@ -1,0 +1,14 @@
+{
+    "presets": [
+      [
+        "@babel/preset-env",
+        {
+          "exclude": ["proposal-dynamic-import"],
+          "modules": "auto"
+        }
+      ],
+      [
+        "@babel/preset-react"
+      ]
+    ]
+}

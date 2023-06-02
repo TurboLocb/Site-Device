@@ -2,13 +2,13 @@
 <html>
     <head>
         <meta charset="UTC-8">
-        <link href="style.css" rel="stylesheet"><link> 
+        <link href="./css/style.css" rel="stylesheet"><link> 
         <link rel="stylesheet" href="http://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">        
         <script src="http://code.jquery.com/jquery-1.12.4.js"></script>
         <script src="http://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
         <!-- Скрипт для слайдера -->
         <script src="./js/catalog/slider.js"></script>        
-</head>
+    </head>
 <body>
 <div class="container">
 <header class="catalog">
@@ -186,8 +186,9 @@
                 </div>
             </div>
         </div>
-        <div class="items sorting-container">
-            <div class="item">
+        <div id ="products-plate" class="items sorting-container">
+
+            <!-- <div class="item">
                     <div class="add-item">
                             <button class="in-backet-button show-button">В корзину</button>
                         </div>
@@ -217,7 +218,7 @@
                     <p class="item-description"></p>
                     <p class="item-price"></p>
                 </div>
-            </div>
+            </div> -->
         </div>
         <nav class="sorting-navigation">
             <button style="margin-left:30px" class="sorting-navigation-button catalog-Gilroy-extra-bold">Назад</button>
@@ -341,7 +342,13 @@
                 <button class="login-form-close-button write-us-popup-close-button"></button>
             </div>
         </form>
-        </div>
+</div>
+<!-- Загрузим React. -->
+<script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
+<script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
+<script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
 <script src="./js/catalog/catalog.js"></script>
+<script type="text/babel" src="./js/rct/product.js"></script>
 </body>
 </html>
