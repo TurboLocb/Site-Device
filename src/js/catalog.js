@@ -1,23 +1,24 @@
-function catalog(){
-    
+import {popupLoginForm} from "./index/popup";
+
+function catalog() {
+    console.log("Выпонение функции \"catalog\"");
     /* Каталог и кнопка открытия/закрытия каталога */
     var catalog = document.querySelector(".header-catalog-div");
     var catalogButton = document.querySelector(".catalog-button");
 
-    catalogButton.addEventListener("click", function(){
+    catalogButton.addEventListener("click", function () {
 
-        if(catalog.classList.contains("catalog-hide") && !catalogButton.classList.contains("catalog-button-animation")){
+        if (catalog.classList.contains("catalog-hide") && ! catalogButton.classList.contains("catalog-button-animation")) {
             catalog.classList.remove("catalog-hide");
             catalogButton.classList.add("catalog-button-animation");
-            
-            if(catalogButton.classList.contains("catalog-button-reverse-animation")){
+
+            if (catalogButton.classList.contains("catalog-button-reverse-animation")) {
                 catalogButton.classList.remove("catalog-button-reverse-animation");
             }
-        }
-        else{
+        } else {
             catalog.classList.add("catalog-hide");
-            catalogButton.classList.add("catalog-button-reverse-animation");  
-            catalogButton.classList.remove("catalog-button-animation");            
+            catalogButton.classList.add("catalog-button-reverse-animation");
+            catalogButton.classList.remove("catalog-button-animation");
         }
 
     });
@@ -30,21 +31,22 @@ function catalog(){
     (скопировано из popup.js)
 
 */
-function popupSearchButton(){
+function popupSearchButton() {
+    console.log("Выполнение функции \"popupSearchButton\"");
 
     var searchInput = document.getElementById("headerInput");
     var popupFormWithSearchButton = document.querySelector(".header-first-div-inner-inside-right");
-    
+
     /* console.log(searchInput);
     console.log(popupFormWithSearchButton); */
 
-    searchInput.addEventListener("focus", function(event){
+    searchInput.addEventListener("focus", function (event) {
 
         popupFormWithSearchButton.classList.remove("search-button-hide");
 
     });
 
-    searchInput.addEventListener("blur", function(event){
+    searchInput.addEventListener("blur", function (event) {
 
         popupFormWithSearchButton.classList.add("search-button-hide");
 
@@ -53,3 +55,4 @@ function popupSearchButton(){
 
 catalog();
 popupSearchButton();
+popupLoginForm();

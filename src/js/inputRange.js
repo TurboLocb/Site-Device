@@ -6,6 +6,11 @@ function inputRange(){
     var input = document.getElementById("inputRange");
     var inputValue = document.getElementById("rangeValue");
 
+    if(input == null | inputValue == null){
+        console.log("Объект(ы) с id 'inputRange', 'rangeValue' не найден(ы) на странице");
+        return;
+    }
+    
     /* Устанавливаем значение из input в inputValue*/
     inputValue.value = "до " + input.value;
     

@@ -4,38 +4,38 @@
 
 */
 
-function popupLoginForm(){
+function popupLoginForm() {
 
     var popupLoginForm = document.querySelector(".background-for-login");
     var popupLoginButtonOpen = document.getElementById("login-enter");
-    var popupLoginButtonOpenFooter = document.getElementById("login-enter-footer");    
+    var popupLoginButtonOpenFooter = document.getElementById("login-enter-footer");
     var popupLoginButtonClose = document.querySelector(".login-form-close-button");
 
-    popupLoginButtonOpen.addEventListener("click", function(event){
+    popupLoginButtonOpen.addEventListener("click", function (event) {
 
         event.preventDefault();
 
-        if(popupLoginForm.classList.contains("popup-hide")){
+        if (popupLoginForm.classList.contains("popup-hide")) {
             popupLoginForm.classList.remove("popup-hide");
         }
 
     });
 
-    popupLoginButtonOpenFooter.addEventListener("click", function(event){
+    popupLoginButtonOpenFooter.addEventListener("click", function (event) {
 
         event.preventDefault();
 
-        if(popupLoginForm.classList.contains("popup-hide")){
+        if (popupLoginForm.classList.contains("popup-hide")) {
             popupLoginForm.classList.remove("popup-hide");
         }
 
     });
 
-    popupLoginButtonClose.addEventListener("click", function(event){
+    popupLoginButtonClose.addEventListener("click", function (event) {
 
         event.preventDefault();
 
-        if(!popupLoginForm.classList.contains("popup-hide")){
+        if (! popupLoginForm.classList.contains("popup-hide")) {
             popupLoginForm.classList.add("popup-hide");
         }
 
@@ -48,32 +48,32 @@ function popupLoginForm(){
 
  */
 
-function popup(){
+function popup() {
 
     var popupForm = document.querySelector(".write-us-popup");
     var popupButtonOpen = document.getElementById("OpenPopupButton");
     var popupButtonClose = popupForm.querySelector(".write-us-popup-close-button");
 
-    /* console.log(popupForm);
-    console.log(popupButtonOpen);
-    console.log(popupButtonClose); */
+    if (popupForm == null | popupButtonOpen == null | popupButtonOpen == null) {
+        console.log("Один из элементов {.write-us-popup, id=OpenPopupButton, .write-us-popup-close-button} не найден");
+        return;
+    }
 
-
-    popupButtonOpen.addEventListener("click", function(evt){
+    popupButtonOpen.addEventListener("click", function (evt) {
 
         evt.preventDefault();
 
-        if(popupForm.classList.contains("popup-hide")){
+        if (popupForm.classList.contains("popup-hide")) {
             popupForm.classList.remove("popup-hide");
         }
 
     });
 
-    popupButtonClose.addEventListener("click", function(evt){
+    popupButtonClose.addEventListener("click", function (evt) {
 
         evt.preventDefault();
 
-        if(!popupForm.classList.contains("popup-hide")){
+        if (! popupForm.classList.contains("popup-hide")) {
             popupForm.classList.add("popup-hide");
         }
 
@@ -87,21 +87,21 @@ function popup(){
   
 */
 
-function popupSearchButton(){
+function popupSearchButton() {
 
     var searchInput = document.getElementById("headerInput");
     var popupFormWithSearchButton = document.querySelector(".header-first-div-inner-inside-right");
-    
+
     /* console.log(searchInput);
     console.log(popupFormWithSearchButton); */
 
-    searchInput.addEventListener("focus", function(event){
+    searchInput.addEventListener("focus", function (event) {
 
         popupFormWithSearchButton.classList.remove("search-button-hide");
 
     });
 
-    searchInput.addEventListener("blur", function(event){
+    searchInput.addEventListener("blur", function (event) {
 
         popupFormWithSearchButton.classList.add("search-button-hide");
 
@@ -112,7 +112,7 @@ function popupSearchButton(){
     Функция изменяет в блоке 'delivery' 
     цвет линии находящийся за надписями "Доставка", "Кредит", "Гарантия"
 */
-function focusChangeBackgroundLine(){  
+function focusChangeBackgroundLine() {
     var deliveryButton = document.getElementById("delivery-button");
     var warrantyButton = document.getElementById("warranty-button");
     var creditButton = document.getElementById("credit-button");
@@ -121,41 +121,43 @@ function focusChangeBackgroundLine(){
     var warrantyBackgroundLine = document.getElementById("warranty-line");
     var creditBackgroundLine = document.getElementById("credit-line");
 
-    // console.log(deliveryButton);
-    // console.log(deliveryBackgroundLine);
+    if (deliveryButton == null | warrantyButton == null | creditButton == null | deliveryBackgroundLine == null | warrantyBackgroundLine == null | creditBackgroundLine == null) {
+        console.log("Не найден один из элементов {delivery-button, warranty-button, credit-button, delivery-line, warranty-line, credit-line}");
+        return;
+    }
 
     /* Обрабатываем нажатие на "Доставка" */
-    deliveryButton.addEventListener("focus", function(event){
+    deliveryButton.addEventListener("focus", function (event) {
         event.preventDefault();
-        
+
         deliveryBackgroundLine.classList.add("line-change-background-color");
-        
+
     });
-    deliveryButton.addEventListener("blur", function(event){
+    deliveryButton.addEventListener("blur", function (event) {
         event.preventDefault();
 
         deliveryBackgroundLine.classList.remove("line-change-background-color");
     });
 
     /* Обрабатываем нажатие на "Гарантия" */
-    warrantyButton.addEventListener("focus", function(event){
+    warrantyButton.addEventListener("focus", function (event) {
         event.preventDefault();
-        
-        warrantyBackgroundLine.classList.add("line-change-background-color");        
+
+        warrantyBackgroundLine.classList.add("line-change-background-color");
     });
-    warrantyButton.addEventListener("blur", function(event){
+    warrantyButton.addEventListener("blur", function (event) {
         event.preventDefault();
 
         warrantyBackgroundLine.classList.remove("line-change-background-color");
     });
 
     /* Обрабатываем нажатие на "Кредит" */
-    creditButton.addEventListener("focus", function(event){
+    creditButton.addEventListener("focus", function (event) {
         event.preventDefault();
-        
-        creditBackgroundLine.classList.add("line-change-background-color");        
+
+        creditBackgroundLine.classList.add("line-change-background-color");
     });
-    creditButton.addEventListener("blur", function(event){
+    creditButton.addEventListener("blur", function (event) {
         event.preventDefault();
 
         creditBackgroundLine.classList.remove("line-change-background-color");
@@ -166,3 +168,7 @@ popup();
 popupSearchButton();
 focusChangeBackgroundLine();
 popupLoginForm();
+
+export {
+    popupLoginForm
+};
